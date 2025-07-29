@@ -33,7 +33,7 @@ def faq():
 @app.route('/guides')
 def guides():
     return render_template('details/guides.html')
-
+  
 
 
 
