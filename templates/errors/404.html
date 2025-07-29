@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 Not Found - The page you’re looking for doesn’t exist. Explore ZyMail’s temporary email service or contact support.">
+    <meta name="keywords" content="zymail 404 error, not found, temporary email error, uthakkan, ajmal u k">
+    <meta name="author" content="Ajmal U K - Uthakkan (UK)">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>404 Not Found | ZyMail</title>
+    <link rel="canonical" href="https://zymail.pythonanywhere.com/errors/404">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="ZyMail">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="alternate" hreflang="en" href="https://zymail.pythonanywhere.com/errors/404">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preload" href="/logo.png" as="image">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://zymail.pythonanywhere.com" crossorigin>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="404 Not Found | ZyMail">
+    <meta property="og:description" content="The page you’re looking for doesn’t exist. Explore ZyMail’s temporary email service or contact support.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zymail.pythonanywhere.com/errors/404">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:image:alt" content="ZyMail 404 Error Page">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="ZyMail">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 Not Found | ZyMail">
+    <meta name="twitter:description" content="The page you’re looking for doesn’t exist. Explore ZyMail’s temporary email service or contact support.">
+    <meta name="twitter:image" content="/twitter-image.jpg">
+    <meta name="twitter:image:alt" content="ZyMail 404 Error Page">
+    <meta name="twitter:site" content="@ajmal_uk_">
+    <meta name="twitter:creator" content="@ajmal_uk_">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #4338CA;
+            --secondary: #10B981;
+            --secondary-dark: #0D9F6E;
+            --accent: #F59E0B;
+            --accent-dark: #D97706;
+            --danger: #EF4444;
+            --danger-dark: #DC2626;
+            --light: #F9FAFB;
+            --light-gray: #E5E7EB;
+            --medium-gray: #9CA3AF;
+            --dark: #111827;
+            --dark-gray: #4B5563;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --info: #3B82F6;
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: var(--gradient-primary);
+            color: white;
+            position: sticky;
+            box-shadow: var(--shadow-xl);
+            top: 0;
+            z-index: 1000;
+            margin: 0;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-center {
+            flex: 1;
+            text-align: center;
+        }
+
+        .google-play {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .google-play:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        .google-play i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: white;
+            background: var(--accent);
+            padding: 8px;
+            border-radius: 50%;
+            font-size: 1.25rem;
+        }
+
+        .donate {
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            background: var(--accent);
+            color: white;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .donate:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .donate i {
+            font-size: 1rem;
+        }
+
+        /* Error Section */
+        .error-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: white;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--light-gray);
+        }
+
+        .error-section h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .error-section p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--medium-gray);
+        }
+
+        .error-section a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .error-section a:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo i {
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-copyright {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 0.75rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .donate {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .error-section h1 {
+                font-size: 2rem;
+            }
+
+            .error-section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 1rem;
+            }
+
+            .nav-left, .nav-center, .nav-right {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .error-section h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="nav-bar">
+        <div class="nav-left">
+            <button class="google-play" aria-label="Download on Google Play" title="Download App"><i class="fas fa-mobile-alt"></i></button>
+        </div>
+        <div class="nav-center">
+            <a href="/" class="logo"><i class="fas fa-envelope"></i> ZyMail</a>
+        </div>
+        <div class="nav-right">
+            <button class="donate"><i class="fas fa-heart"></i> Donate</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Error Section -->
+        <section class="error-section">
+            <h1>404 Not Found</h1>
+            <p>Looks like the page you’re looking for doesn’t exist. It might have been moved or deleted. Head back to our homepage to explore ZyMail’s temporary email service!</p>
+            <a href="/">Return to Homepage</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-envelope"></i> ZyMail
+            </div>
+            <div class="footer-links">
+                <a href="/" class="footer-link">Home</a>
+                <a href="/about" class="footer-link">About</a>
+                <a href="/features" class="footer-link">Features</a>
+                <a href="/faq" class="footer-link">FAQ</a>
+                <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <a href="/terms" class="footer-link">Terms of Service</a>
+                <a href="/contact" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="footer-copyright">© 2025 ZyMail - Free Temporary Email Generator. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

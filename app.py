@@ -30,17 +30,27 @@ def privacy():
 def faq():
     return render_template('details/faq.html')
 
-@app.route('/guides')
-def guides():
-    return render_template('details/guides.html')
-  
+@app.route('/blog')
+def blog():
+    return render_template('details/blog.html')
+
+@app.route('/features')
+def features():
+    return render_template('details/features.html')
 
 
 
-#ai-code-editors
-@app.route('/ai-online-compilers')
-def ai_code_editors():
-    return render_template('code-editors/index.html')
+@app.route('/blog/why-use-a-temporary-email-service')
+def why_use_a_temporary_email_service():
+    return render_template('blogs/why-use-a-temporary-email-service.html')
+
+@app.route('/blog/how-to-avoid-spam-with-temporary-emails')
+def how_to_avoid_spam_with_temporary_emails():
+    return render_template('blogs/how-to-avoid-spam-with-temporary-emails.html')
+
+@app.route('/blog/protecting-your-online-privacy')
+def protecting_your_online_privacy():
+    return render_template('blogs/protecting-your-online-privacy.html')
 
 
 #error handlers
@@ -59,8 +69,6 @@ def not_found(error):
 @app.errorhandler(500)
 def internal_error(error):
     return render_template('errors/500.html', title='500 Internal Server Error'), 500
-
-
 
 
 
@@ -102,14 +110,6 @@ def favicon_ico():
 @app.route('/favicon.svg')
 def favicon_svg():
     return send_from_directory('assets/favicon', 'favicon.svg')
-
-@app.route('/favicon-32x32.png')
-def favicon_32():
-    return send_from_directory('assets/favicon', 'favicon-32x32.png')
-
-@app.route('/favicon-16x16.png')
-def favicon_16():
-    return send_from_directory('assets/favicon', 'favicon-16x16.png')
 
 @app.route('/favicon-96x96.png')
 def favicon_96():
