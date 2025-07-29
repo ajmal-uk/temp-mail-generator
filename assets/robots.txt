@@ -1,4 +1,4 @@
 User-agent: * 
 Allow: /
 
-Sitemap: https://toolpix.pythonanywhere.com/sitemap.xml
+Sitemap: https://zymail.pythonanywhere.com/sitemap.xml
