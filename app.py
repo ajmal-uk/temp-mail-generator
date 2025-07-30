@@ -12,31 +12,35 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('details/about.html')
+    return render_template('about.html')
 
 @app.route('/contact')
 def contact():
-    return render_template('details/contact.html')
+    return render_template('contact.html')
 
 @app.route('/terms')
 def terms():
-    return render_template('details/terms.html')
+    return render_template('terms.html')
 
 @app.route('/privacy')
 def privacy():
-    return render_template('details/privacy.html')
+    return render_template('privacy.html')
 
 @app.route('/faq')
 def faq():
-    return render_template('details/faq.html')
+    return render_template('faq.html')
 
 @app.route('/blog')
 def blog():
-    return render_template('details/blog.html')
+    return render_template('blog.html')
 
 @app.route('/features')
 def features():
-    return render_template('details/features.html')
+    return render_template('features.html')
+
+@app.route('/app')
+def app_page():
+    return render_template('app.html')
 
 
 
@@ -131,7 +135,10 @@ def apple_icon():
 def webmanifest():
     return send_from_directory('assets/favicon', 'site.webmanifest')
 
-
+@app.route('/download-app', methods=['GET'])
+def download_app():
+    file_path = "/home/zymail/mysite/app/app.apk"
+    return send_file(file_path, as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=False, threaded=True, host='0.0.0.0', port=5000)
