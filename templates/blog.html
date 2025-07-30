@@ -486,7 +486,7 @@
     <!-- Navigation Bar -->
     <header class="nav-bar">
         <div class="nav-left">
-    <button class="google-play" aria-label="Download on Google Play" title="Download App" onclick="window.location.href='/download-app'">
+    <button class="google-play" aria-label="Download on Google Play" title="Download App" id="downloadBtn">
         <i class="fas fa-mobile-alt"></i>
     </button>
 </div>
@@ -568,5 +568,26 @@
             <p class="footer-copyright">© 2025 ZyMail - Free Temporary Email Generator. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/download-app');
+                const blob = await response.blob();
+
+                // Create a temporary link to trigger download
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "app.apk"; // file name for download
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                alert('Failed to download the app.');
+                console.error(error);
+            }
+        });
+    </script>
 </body>
 </html>

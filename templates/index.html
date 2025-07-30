@@ -1412,10 +1412,10 @@
 
     <header class="nav-bar">
         <div class="nav-left">
-            <button class="google-play" aria-label="Download on Google Play" title="Download App" onclick="window.location.href='/download-app'">
-                <i class="fas fa-mobile-alt"></i>
-            </button>
-        </div>
+    <button class="google-play" aria-label="Download on Google Play" title="Download App" id="downloadBtn">
+        <i class="fas fa-mobile-alt"></i>
+    </button>
+</div>
         <div class="nav-center">
             <a href="/" class="logo"><i class="fas fa-envelope"></i> ZyMail</a>
         </div>
@@ -2061,6 +2061,26 @@
                 messagesBody.appendChild(tr);
             });
         }
+
+        document.getElementById('downloadBtn').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/download-app');
+                const blob = await response.blob();
+
+                // Create a temporary link to trigger download
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "app.apk"; // file name for download
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                alert('Failed to download the app.');
+                console.error(error);
+            }
+        });
     </script>
 </body>
 </html>
