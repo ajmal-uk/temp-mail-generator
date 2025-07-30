@@ -24,7 +24,9 @@
     <link rel="alternate" hreflang="en" href="https://zymail.pythonanywhere.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- QRCode.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Temp Mail | Free Disposable Email Without Signup – ZyMail">
     <meta property="og:description" content="ZyMail offers a free temp mail generator for secure, anonymous email addresses. Receive OTPs instantly with no signup required.">
     <meta property="og:type" content="website">
@@ -34,7 +36,8 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="ZyMail">
-    <meta property="og:locale" content="en_US">
+    <meta损坏 property="og:locale" content="en_US">
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Temp Mail | Free Disposable Email Without Signup – ZyMail">
     <meta name="twitter:description" content="Generate disposable email addresses with ZyMail's free temp mail service. Instant OTP receipt, privacy protection, no signup needed.">
@@ -45,6 +48,7 @@
     <link rel="preload" href="https://zymail.pythonanywhere.com/logo.png" as="image">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://zymail.pythonanywhere.com" crossorigin>
+    <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -55,7 +59,7 @@
                 "name": "Temp Mail | Free Disposable Email Without Signup – ZyMail",
                 "url": "https://zymail.pythonanywhere.com",
                 "description": "ZyMail provides a free temp mail generator for disposable email addresses, offering instant OTP receipt and privacy protection without signup.",
-                "keywords": "temp mail, temporary email, disposable email, free temp mail, temp mail generator, free temporary email, secure temp mail, anonymous email, spam-free email, OTP receiver, email privacy, instant email, no signup email, disposable email address, temp email service, fake email generator, burner email, one-time email, email verification, temporary inbox, email forwarder, privacy protection, email masking, secure email, temp mail for verification, free email without registration, temp mail inbox, disposable mailbox, email protector, anonymous temp mail,长quick temp mail, best temp mail, temp mail 2025, reliable temp mail, temp mail for signup, temp mail for testing, email spam blocker, temporary email solution, free disposable email, temp mail api, temp mail extension, temp mail app, temp mail website, temp mail online, temp mail service free, create temp mail, random email generator, temp mail for developers, temp mail for business, temp mail for students, temp mail for privacy, best free temp mail, temp mail comparison, temp mail features, temp mail benefits, temp mail advantages, temp mail use cases, how temp mail works, why use temp mail, temp mail tutorial, temp mail guide, temp mail faq",
+                "keywords": "temp mail, temporary email, disposable email, free temp mail, temp mail generator, free temporary email, secure temp mail, anonymous email, spam-free email, OTP receiver, email privacy, instant email, no signup email, disposable email address, temp email service, fake email generator, burner email, one-time email, email verification, temporary inbox, email forwarder, privacy protection, email masking, secure email, temp mail for verification, free email without registration, temp mail inbox, disposable mailbox, email protector, anonymous temp mail, quick temp mail, best temp mail, temp mail 2025, reliable temp mail, temp mail for signup, temp mail for testing, email spam blocker, temporary email solution, free disposable email, temp mail api, temp mail extension, temp mail app, temp mail website, temp mail online, temp mail service free, create temp mail, random email generator, temp mail for developers, temp mail for business, temp mail for students, temp mail for privacy, best free temp mail, temp mail comparison, temp mail features, temp mail benefits, temp mail advantages, temp mail use cases, how temp mail works, why use temp mail, temp mail tutorial, temp mail guide, temp mail faq",
                 "publisher": {
                     "@id": "https://zymail.pythonanywhere.com/#organization"
                 },
@@ -228,6 +232,7 @@
             position: relative;
         }
 
+        /* Navigation Bar */
         .nav-bar {
             display: flex;
             justify-content: space-between;
@@ -320,10 +325,12 @@
             font-size: 1rem;
         }
 
+        /* Main Content */
         .main-content {
             padding: 2rem 0;
         }
 
+        /* Hero Section */
         .hero-section {
             text-align: center;
             padding: 3rem 0;
@@ -353,6 +360,7 @@
             font-weight: 700;
         }
 
+        /* Email Section */
         .email-section {
             margin-bottom: 3rem;
             background: white;
@@ -451,6 +459,7 @@
             line-height: 1.7;
         }
 
+        /* Buttons */
         .btn {
             padding: 0.8rem 1.75rem;
             border-radius: var(--border-radius);
@@ -598,6 +607,7 @@
             gap: 0.5rem;
         }
 
+        /* Inbox Section */
         .inbox-section {
             background: white;
             border-radius: var(--border-radius);
@@ -667,7 +677,6 @@
 
         .messages-table tr {
             cursor: pointer;
-            transition: var(--transition);
         }
 
         .messages-table tr:last-child td {
@@ -676,10 +685,6 @@
 
         .messages-table tr:hover {
             background: var(--light);
-        }
-
-        .messages-table tr.read {
-            background-color: #f0f0f0;
         }
 
         .message-sender {
@@ -694,18 +699,12 @@
         .message-subject {
             font-weight: 500;
             color: var(--dark);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 300px;
         }
 
         .message-time {
             color: var(--medium-gray);
             font-size: 0.85rem;
             white-space: nowrap;
-            text-align: right;
-            min-width: 80px;
         }
 
         .message-preview {
@@ -717,11 +716,9 @@
             line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            white-space: normal;
-            word-wrap: break-word;
-            max-width: 300px;
         }
 
+        /* Empty State */
         .empty-state {
             text-align: center;
             padding: 3rem;
@@ -745,6 +742,7 @@
             margin: 0 auto;
         }
 
+        /* Features Section */
         .features-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -790,6 +788,7 @@
             line-height: 1.7;
         }
 
+        /* Info Section */
         .info-section {
             background: white;
             border-radius: var(--border-radius);
@@ -812,6 +811,7 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Note Section */
         .note-section {
             background: var(--light);
             border-radius: var(--border-radius);
@@ -849,6 +849,7 @@
             font-size: 0.8rem;
         }
 
+        /* Article Section */
         .article-section {
             background: white;
             border-radius: var(--border-radius);
@@ -893,6 +894,7 @@
             font-size: 1rem;
         }
 
+        /* FAQ Section */
         .faq-section {
             margin-bottom: 3rem;
         }
@@ -955,6 +957,7 @@
             max-height: 500px;
         }
 
+        /* QR Modal */
         .modal {
             display: none;
             position: fixed;
@@ -977,12 +980,11 @@
             position: relative;
             max-width: 90vw;
             max-height: 90vh;
-            width: 600px;
+            width: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
             animation: modalFadeIn 0.3s ease;
-            overflow-y: auto;
         }
 
         @keyframes modalFadeIn {
@@ -1035,11 +1037,10 @@
             word-break: break-all;
         }
 
+        /* Email Modal Specific Styles */
         .email-detail {
             margin-bottom: 1rem;
             color: var(--dark-gray);
-            width: 100%;
-            text-align: left;
         }
 
         .email-detail strong {
@@ -1061,18 +1062,9 @@
             font-size: 0.9rem;
             line-height: 1.5;
             width: 100%;
-            box-sizing: border-box;
         }
 
-        .btn-download {
-            background: var(--info);
-            margin-top: 1rem;
-        }
-
-        .btn-download:hover {
-            background: #2563eb;
-        }
-
+        /* Toast Notification */
         .toast {
             position: fixed;
             bottom: 2rem;
@@ -1113,6 +1105,7 @@
             font-weight: 500;
         }
 
+        /* Footer */
         .footer {
             background: var(--dark);
             color: white;
@@ -1185,49 +1178,54 @@
             font-size: 0.9rem;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-bar {
                 padding: 0.75rem 1rem;
             }
+            
             .logo {
                 font-size: 1.5rem;
             }
+            
             .donate {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
+            
             .hero-section h1 {
                 font-size: 2rem;
             }
+            
             .hero-section p {
                 font-size: 1rem;
             }
+            
             .email-section, .info-section, .article-section {
                 padding: 1.5rem;
             }
+            
             .email-display {
                 padding: 1.5rem;
             }
+            
             #emailText {
                 font-size: 1.2rem;
             }
+            
             .btn {
                 padding: 0.7rem 1.5rem;
                 font-size: 0.9rem;
             }
+            
             .btn-icon {
                 width: 45px;
                 height: 45px;
             }
+            
             .modal-content {
                 width: 90%;
                 padding: 1.5rem;
-            }
-            .message-sender {
-                max-width: 150px;
-            }
-            .message-subject, .message-preview {
-                max-width: 200px;
             }
         }
 
@@ -1237,51 +1235,55 @@
                 gap: 0.75rem;
                 padding: 1rem;
             }
+            
             .nav-left, .nav-center, .nav-right {
                 width: 100%;
                 justify-content: center;
             }
+            
             .hero-section h1 {
                 font-size: 1.75rem;
             }
+            
             .email-actions {
                 flex-direction: column;
                 width: 100%;
             }
+            
             .btn {
                 width: 100%;
                 justify-content: center;
             }
+            
             .controls {
                 gap: 1rem;
             }
+            
             .btn-icon {
                 width: 40px;
                 height: 40px;
             }
+            
             .btn-label {
                 font-size: 0.75rem;
             }
+            
             .messages-table th, 
             .messages-table td {
                 padding: 0.75rem;
                 font-size: 0.85rem;
             }
+            
             .toast {
                 width: calc(100% - 2rem);
                 right: 1rem;
                 bottom: 1rem;
             }
-            .message-sender {
-                max-width: 100px;
-            }
-            .message-subject, .message-preview {
-                max-width: 150px;
-            }
         }
     </style>
 </head>
 <body>
+    <!-- QR Modal -->
     <div id="qrModal" class="modal">
         <div class="modal-content">
             <button id="closeQrModal" class="modal-close" aria-label="Close QR Modal">&times;</button>
@@ -1291,6 +1293,7 @@
         </div>
     </div>
 
+    <!-- Email Modal -->
     <div id="emailModal" class="modal">
         <div class="modal-content">
             <button id="closeEmailModal" class="modal-close" aria-label="Close Email Modal">&times;</button>
@@ -1306,16 +1309,17 @@
                     <strong>Date:</strong> <span id="emailDate"></span>
                 </div>
                 <div class="email-body" id="emailBody"></div>
-                <button id="downloadEmailBtn" class="btn btn-download" aria-label="Download Email"><i class="fas fa-download"></i> Download Email</button>
             </div>
         </div>
     </div>
 
+    <!-- Toast Notification -->
     <div id="toast" class="toast">
         <i class="fas fa-check-circle"></i>
         <span class="toast-message">Email copied to clipboard!</span>
     </div>
 
+    <!-- Navigation Bar -->
     <header class="nav-bar">
         <div class="nav-left">
             <button class="google-play" aria-label="Download on Google Play" title="Download App"><i class="fas fa-mobile-alt"></i></button>
@@ -1329,12 +1333,15 @@
     </header>
 
     <div class="container">
+        <!-- Hero Section -->
         <section class="hero-section">
             <h1>Secure <span class="highlight">Temp Mail</span> for Privacy Protection</h1>
             <p>ZyMail provides free disposable email addresses to protect your privacy from spam, hackers, and unwanted mailings. No registration required - get your temporary inbox instantly!</p>
-</section>
+        </section>
 
+        <!-- Main Content -->
         <main class="main-content">
+            <!-- Email Section -->
             <section class="email-section">
                 <h2 class="email-title">Your Temporary Email Address</h2>
                 <div class="email-display">
@@ -1367,6 +1374,7 @@
                 </div>
             </section>
 
+            <!-- Inbox Section -->
             <section class="inbox-section">
                 <div class="inbox-header">
                     <h2>Inbox Messages</h2>
@@ -1377,6 +1385,7 @@
                         <tr>
                             <th>Sender</th>
                             <th>Subject</th>
+                            <th>Time</th>
                         </tr>
                     </thead>
                     <tbody id="messagesBody">
@@ -1391,6 +1400,7 @@
                 </table>
             </section>
 
+            <!-- Features Section -->
             <section class="features-section">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1415,6 +1425,7 @@
                 </div>
             </section>
 
+            <!-- Info Section -->
             <section class="info-section">
                 <h2>What is a Temporary Email?</h2>
                 <p class="email-description">
@@ -1426,6 +1437,7 @@
                 <p>Unlike regular email services, temp mail addresses are designed to be temporary and disposable. When you're done with the service, simply delete the address or generate a new one - no personal data is stored or collected.</p>
             </section>
 
+            <!-- Note Section -->
             <section class="note-section">
                 <h4><i class="fas fa-info-circle"></i> Important Information About Temp Mail</h4>
                 <ul>
@@ -1439,23 +1451,31 @@
                 </ul>
             </section>
 
+            <!-- Article Section -->
             <section class="article-section">
                 <h2>The Benefits of Using Temporary Email</h2>
                 <p>Temporary email addresses, also known as temp mail or disposable email, offer significant advantages for online users. Discover how ZyMail's free temp mail generator enhances your online privacy, security, and convenience.</p>
+                
                 <h3><i class="fas fa-shield-alt"></i> Protect Your Privacy</h3>
                 <p>Using a temporary email address keeps your personal email private, reducing exposure to data breaches and third-party sales. Many websites and services sell or share email addresses with advertisers and marketers. By using a temp mail address, you maintain control over your primary inbox and personal information.</p>
+                
                 <h3><i class="fas fa-trash-alt"></i> Avoid Spam and Unwanted Mail</h3>
                 <p>Sign up for websites or services with a disposable email to prevent unwanted spam. Once you're done with the service, simply discard the temp email address. This keeps your primary inbox clean and free from marketing emails, newsletters, and other unwanted communications that often follow online registrations.</p>
+                
                 <h3><i class="fas fa-lock"></i> Secure Online Registrations</h3>
                 <p>Complete email verifications for online registrations with a temporary email, safeguarding your primary email account. Many services require email verification to activate accounts or access features. Using a temp mail address prevents your real email from being associated with these accounts, reducing your digital footprint.</p>
+                
                 <h3><i class="fas fa-bolt"></i> Instant OTP Receipt</h3>
                 <p>Receive one-time passwords (OTPs) and verification codes instantly without exposing your personal email. Many banking, social media, and e-commerce services use OTPs for security. Our temp mail service provides immediate access to these codes while keeping your primary email secure.</p>
+                
                 <h3><i class="fas fa-thumbs-up"></i> Easy to Use</h3>
                 <p>ZyMail's free temp mail service is user-friendly, requiring no signup or personal information. Generate a disposable email address instantly for seamless, secure communication. Our interface is designed for simplicity, allowing you to create, manage, and discard temp mail addresses with just a few clicks.</p>
             </section>
 
+            <!-- FAQ Section -->
             <section class="faq-section">
                 <h2>Frequently Asked Questions</h2>
+                
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What is ZyMail Temp Mail?</span>
@@ -1465,6 +1485,7 @@
                         <p>ZyMail Temp Mail is a free temporary email service that provides disposable email addresses for receiving emails without using your personal email. It's perfect for OTP verification, website registrations, and protecting your privacy online.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Is ZyMail Temp Mail really free?</span>
@@ -1474,15 +1495,17 @@
                         <p>Yes, ZyMail offers its temp mail service completely free with no hidden costs. There are no premium features or paywalls - all functionality is available to all users without charge.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
-                       10                    <span>How long does a temporary email last?</span>
+                        <span>How long does a temporary email last?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Your temporary email remains active until you manually delete it or generate a new one. However, some services may automatically expire inactive addresses after a period of time (typically several hours to a few days).</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Can I send emails from a temp mail address?</span>
@@ -1492,6 +1515,7 @@
                         <p>No, ZyMail's temp mail service is designed only for receiving emails. This helps maintain security and prevent abuse of the service. If you need to send emails, you should use a regular email service.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Why should I use a temp mail service?</span>
@@ -1501,6 +1525,7 @@
                         <p>Temp mail protects your privacy by keeping your real email address hidden, prevents spam in your primary inbox, and provides quick access for email verifications without registration. It's ideal for situations where you need an email address temporarily but don't want to use your personal one.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What if a service blocks my temp mail address?</span>
@@ -1514,6 +1539,7 @@
         </main>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -1521,18 +1547,17 @@
             </div>
             <div class="footer-links">
                 <a href="#" class="footer-link">Home</a>
-                <a href="/features" class="footer-link">Features</a>
+                <a href="#" class="footer-link">Features</a>
                 <a href="/faq" class="footer-link">FAQ</a>
                 <a href="/privacy" class="footer-link">Privacy Policy</a>
                 <a href="/terms" class="footer-link">Terms of Service</a>
                 <a href="/contact" class="footer-link">Contact</a>
-                <a href="/blog" class="footer-link">Blog</a>
             </div>
             <div class="footer-social">
-                <a href="https://x.com/ajmal_uk_" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/muhammed-ajmal-u-k-616b152ba" class="social-icon" aria-label="Facebook"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/ajmaluk.me" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/ajmal-uk" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
             <p class="footer-copyright">© 2025 ZyMail - Free Temporary Email Generator. All rights reserved.</p>
         </div>
@@ -1575,8 +1600,7 @@
                         return this.email;
                     }
                 } catch (error) {
-                    console.error('Error generating email:', error);
-                    showToast('Failed to generate email. Please try again.', 'error');
+                    console.error('Error:', error);
                     return null;
                 }
             }
@@ -1590,17 +1614,12 @@
                     if (response.ok) {
                         const data = await response.json();
                         this.lastChecked = new Date();
-                        const messages = data['hydra:member'] || [];
-                        this.saveMessagesToLocalStorage(messages);
-                        return messages;
-                    } else {
-                        showToast('Failed to check inbox. Please try again later.', 'error');
-                        return this.getMessagesFromLocalStorage();
+                        return data['hydra:member'] || [];
                     }
+                    return [];
                 } catch (error) {
                     console.error('Inbox error:', error);
-                    showToast('An error occurred while checking the inbox.', 'error');
-                    return this.getMessagesFromLocalStorage();
+                    return [];
                 }
             }
 
@@ -1639,26 +1658,6 @@
                 }
                 return result;
             }
-
-            saveMessagesToLocalStorage(messages) {
-                if (this.email) {
-                    localStorage.setItem(`messages_${this.email}`, JSON.stringify(messages));
-                }
-            }
-
-            getMessagesFromLocalStorage() {
-                if (this.email) {
-                    const savedMessages = localStorage.getItem(`messages_${this.email}`);
-                    return savedMessages ? JSON.parse(savedMessages) : [];
-                }
-                return [];
-            }
-
-            clearMessagesFromLocalStorage() {
-                if (this.email) {
-                    localStorage.removeItem(`messages_${this.email}`);
-                }
-            }
         }
 
         const tempMail = new TempMailReceiver();
@@ -1681,50 +1680,13 @@
         const emailSubject = document.getElementById('emailSubject');
         const emailDate = document.getElementById('emailDate');
         const emailBody = document.getElementById('emailBody');
-        const downloadEmailBtn = document.getElementById('downloadEmailBtn');
         const closeEmailModal = document.getElementById('closeEmailModal');
         const toast = document.getElementById('toast');
         const faqItems = document.querySelectorAll('.faq-item');
 
-        function saveEmailToLocalStorage(email) {
-            localStorage.setItem('tempEmail', email);
-        }
-
-        async function loadOrGenerateEmail() {
-            const savedEmail = localStorage.getItem('tempEmail');
-            if (savedEmail) {
-                tempMail.email = savedEmail;
-                const [username, domain] = savedEmail.split('@');
-                tempMail.username = username;
-                tempMail.domain = domain;
-                const authResponse = await fetch('https://api.mail.tm/token', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ address: savedEmail, password: 'temp123' })
-                });
-                if (authResponse.ok) {
-                    const authData = await authResponse.json();
-                    tempMail.token = authData.token;
-                    tempMail.startChecking();
-                    const savedMessages = tempMail.getMessagesFromLocalStorage();
-                    updateInbox(savedMessages);
-                    return savedEmail;
-                } else {
-                    localStorage.removeItem('tempEmail');
-                    tempMail.clearMessagesFromLocalStorage();
-                    return await tempMail.generateEmail();
-                }
-            } else {
-                const newEmail = await tempMail.generateEmail();
-                if (newEmail) {
-                    saveEmailToLocalStorage(newEmail);
-                }
-                return newEmail;
-            }
-        }
-
+        // Auto-generate email on page load
         document.addEventListener('DOMContentLoaded', async () => {
-            const email = await loadOrGenerateEmail();
+            const email = await tempMail.generateEmail();
             if (email) {
                 loadingIcon.style.display = 'none';
                 emailText.textContent = email;
@@ -1736,6 +1698,7 @@
             }
         });
 
+        // Copy button functionality
         function copyEmail(button) {
             if (tempMail.email) {
                 navigator.clipboard.writeText(tempMail.email).then(() => {
@@ -1755,6 +1718,7 @@
         copyBtnTop.addEventListener('click', () => copyEmail(copyBtnTop));
         copyBtn.addEventListener('click', () => copyEmail(copyBtn));
 
+        // QR Code button functionality
         qrBtn.addEventListener('click', () => {
             if (!tempMail.email) {
                 showToast('No email to generate QR code', 'error');
@@ -1786,10 +1750,10 @@
             }
         });
 
+        // Email Modal functionality
         messagesBody.addEventListener('click', async (e) => {
             const tr = e.target.closest('tr');
             if (tr && tr.hasAttribute('data-message-id')) {
-                tr.classList.add('read');
                 const messageId = tr.getAttribute('data-message-id');
                 const message = await tempMail.getMessageDetails(messageId);
                 if (message) {
@@ -1803,24 +1767,12 @@
         function showEmailModal(message) {
             emailFrom.textContent = message.from.address || 'Unknown';
             emailSubject.textContent = message.subject || 'No Subject';
-            const date = new Date(message.createdAt || new Date());
+            const date = new Date(message.createdAt);
             emailDate.textContent = date.toLocaleString();
             emailBody.textContent = message.text || 'No content available';
             emailModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
-
-        downloadEmailBtn.addEventListener('click', () => {
-            const emailContent = `From: ${emailFrom.textContent}\nSubject: ${emailSubject.textContent}\nDate: ${emailDate.textContent}\n\n${emailBody.textContent}`;
-            const blob = new Blob([emailContent], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `${emailSubject.textContent || 'email'}.txt`;
-            a.click();
-            URL.revokeObjectURL(url);
-            showToast('Email downloaded successfully!', 'success');
-        });
 
         closeEmailModal.addEventListener('click', () => {
             emailModal.style.display = 'none';
@@ -1834,22 +1786,27 @@
             }
         });
 
+        // Toast notification
         function showToast(message, type) {
             const toastIcon = toast.querySelector('i');
             toast.className = 'toast';
             toast.classList.add(type);
+            
             if (type === 'success') {
                 toastIcon.className = 'fas fa-check-circle';
             } else {
                 toastIcon.className = 'fas fa-exclamation-circle';
             }
+            
             toast.querySelector('.toast-message').textContent = message;
             toast.classList.add('show');
+            
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 3000);
         }
 
+        // FAQ accordion
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
             question.addEventListener('click', () => {
@@ -1857,6 +1814,7 @@
             });
         });
 
+        // Control buttons
         refreshBtn.addEventListener('click', async () => {
             refreshBtn.classList.add('spinning');
             refreshInboxBtn.classList.add('spinning');
@@ -1887,17 +1845,15 @@
 
         changeBtn.addEventListener('click', async () => {
             if (!confirm('Are you sure you want to change your temporary email? All current messages will be lost.')) return;
+            
             tempMail.stopChecking();
-            tempMail.clearMessagesFromLocalStorage();
             loadingIcon.style.display = 'inline';
             emailText.style.display = 'none';
             const email = await tempMail.generateEmail();
             if (email) {
-                saveEmailToLocalStorage(email);
                 loadingIcon.style.display = 'none';
                 emailText.textContent = email;
                 emailText.style.display = 'inline';
-                updateInbox([]);
                 showToast('New temporary email generated!', 'success');
             } else {
                 loadingIcon.style.display = 'none';
@@ -1909,9 +1865,8 @@
 
         deleteBtn.addEventListener('click', () => {
             if (!confirm('Are you sure you want to delete your temporary email? All messages will be lost.')) return;
+            
             tempMail.stopChecking();
-            tempMail.clearMessagesFromLocalStorage();
-            localStorage.removeItem('tempEmail');
             emailText.textContent = 'Email deleted - generate a new one';
             messagesBody.innerHTML = `
                 <tr>
@@ -1927,6 +1882,7 @@
 
         function updateInbox(messages) {
             messagesBody.innerHTML = '';
+            
             if (messages.length === 0) {
                 messagesBody.innerHTML = `
                     <tr>
@@ -1939,14 +1895,15 @@
                 `;
                 return;
             }
+            
             messages.forEach(msg => {
                 const from = msg.from && msg.from.address ? msg.from.address : 'Unknown';
                 const subject = msg.subject || 'No Subject';
-                const date = new Date(msg.createdAt || new Date());
-                const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                const date = new Date(msg.createdAt);
+                const timeString = date.toLocaleTimeString([], { hour: '2-digit', by: '2-digit' });
+                
                 const tr = document.createElement('tr');
                 tr.setAttribute('data-message-id', msg.id);
-                if (msg.seen) tr.classList.add('read');
                 tr.innerHTML = `
                     <td>
                         <div class="message-sender">${from}</div>
@@ -1959,9 +1916,16 @@
                         <div class="message-time">${timeString}</div>
                     </td>
                 `;
+                
                 messagesBody.appendChild(tr);
             });
         }
+
+        // Auto-refresh inbox every 5 seconds
+        setInterval(async () => {
+            const messages = await tempMail.checkInbox();
+            updateInbox(messages);
+        }, 5000);
     </script>
 </body>
 </html>
