@@ -138,7 +138,12 @@ def webmanifest():
 @app.route('/download-app', methods=['GET'])
 def download_app():
     file_path = "/home/zychat/mysite/app/app.apk"
-    return send_file(file_path, as_attachment=True, download_name='app.apk')
+    return send_file(
+        file_path,
+        mimetype='application/vnd.android.package-archive',
+        as_attachment=True,
+        download_name='ZyChat.apk'
+    )
 
 
 if __name__ == '__main__':
