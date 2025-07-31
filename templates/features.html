@@ -443,14 +443,33 @@
 
         @media (max-width: 480px) {
             .nav-bar {
-                flex-direction: column;
-                gap: 0.75rem;
-                padding: 1rem;
+                flex-direction: row; 
+                align-items: center; 
+                gap: 0.5rem; 
+                padding: 0.75rem; 
+                flex-wrap: wrap; 
             }
 
             .nav-left, .nav-center {
-                width: 100%;
-                justify-content: center;
+                width: auto;
+                justify-content: flex-start; 
+            }
+
+            .nav-center {
+                flex-grow: 1;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .google-play {
+                width: 32px;
+                height: 32px;
+            }
+
+            .google-play i {
+                font-size: 1.2rem;
             }
 
             .hero-section h1 {
