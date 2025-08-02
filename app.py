@@ -135,16 +135,5 @@ def apple_icon():
 def webmanifest():
     return send_from_directory('assets/favicon', 'site.webmanifest')
 
-@app.route('/download-app', methods=['GET'])
-def download_app():
-    file_path = "/home/zychat/mysite/app/app.apk"
-    return send_file(
-        file_path,
-        mimetype='application/vnd.android.package-archive',
-        as_attachment=True,
-        download_name='ZyChat.apk'
-    )
-
-
 if __name__ == '__main__':
     app.run(debug=False, threaded=True, host='0.0.0.0', port=5000)
