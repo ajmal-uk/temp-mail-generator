@@ -339,39 +339,14 @@
             margin: 0;
         }
 
-        .nav-left {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
+        
 
         .nav-center {
             flex: 1;
             text-align: center;
         }
 
-        .google-play {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .google-play:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-md);
-        }
-
-        .google-play i {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
+        
 
         .logo {
             font-size: 1.75rem;
@@ -1434,12 +1409,7 @@
         <span class="toast-message">Email copied to clipboard!</span>
     </div>
 
-    <header class="nav-bar">
-        <div class="nav-left">
-    <button class="google-play" aria-label="Download on Google Play" title="Download App" id="downloadBtn">
-        <i class="fas fa-mobile-alt"></i>
-    </button>
-</div>
+    
         <div class="nav-center">
             <a href="/" class="logo"><i class="fas fa-envelope"></i> ZyMail</a>
         </div>
@@ -2084,25 +2054,7 @@
             });
         }
 
-        document.getElementById('downloadBtn').addEventListener('click', async () => {
-            try {
-                const response = await fetch('/download-app');
-                const blob = await response.blob();
-
-                // Create a temporary link to trigger download
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = "app.apk"; // file name for download
-                document.body.appendChild(a);
-                a.click();
-                a.remove();
-                window.URL.revokeObjectURL(url);
-            } catch (error) {
-                alert('Failed to download the app.');
-                console.error(error);
-            }
-        });
+        
     </script>
 </body>
 </html>
