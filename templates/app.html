@@ -3,1424 +3,1319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZyMail App provides a free temporary email service for instant OTP receipt and privacy protection. Access disposable email addresses without signup, with features like QR code sharing and auto-refreshing inbox.">
-    <meta name="keywords" content="temp mail app, disposable email app, free temporary email, secure temp mail, anonymous email, OTP receiver, email privacy, instant email, no signup email, temp email service, QR code email, temporary inbox, privacy protection, email masking, temp mail for verification, free disposable email, temp mail online, create temp mail, random email generator, temp mail for developers, temp mail for privacy, best free temp mail">
-    <meta name="author" content="Ajmal U K - UTHAKKAN (UK)">
+    <meta name="description" content="Generate free temporary email addresses instantly with ZyMail. Protect your privacy, avoid spam, receive OTPs - no signup required. Best disposable email service.">
+    <meta name="keywords" content="temp mail, temporary email, disposable email, free temp mail, email privacy, anonymous email, spam protection, OTP receiver, email verification, secure email, 10 minute mail, instant email, no signup email">
+    <meta name="author" content="Ajmal U K - UTHAKKAN">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
+    <meta name="revisit-after" content="2 days">
     <meta name="language" content="English">
-    <title>ZyMail App | Free Temporary Email Generator – No Signup</title>
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <title>ZyMail App | Free Temporary Email Generator</title>
     <link rel="canonical" href="https://zymail.pythonanywhere.com/app">
+    
+    <!-- Favicon and Icons -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="ZyMail App">
-    <meta name="theme-color" content="#4F46E5">
+    <meta name="apple-mobile-web-app-title" content="ZyMail">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="alternate" hreflang="en" href="https://zymail.pythonanywhere.com/app">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <meta property="og:title" content="ZyMail App | Free Temporary Email Generator – No Signup">
-    <meta property="og:description" content="ZyMail App offers a free, secure temp mail service with disposable email addresses for OTP receipt and privacy protection. No signup required, with QR code sharing and auto-refreshing inbox.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ZyMail App | Free Temporary Email Generator">
+    <meta property="og:description" content="Generate free temporary email addresses instantly with ZyMail. Protect your privacy, avoid spam, receive OTPs - no signup required. Best disposable email service.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zymail.pythonanywhere.com/app">
-    <meta property="og:image" content="/og-image-app.jpg">
+    <meta property="og:image" content="/og-image.jpg">
     <meta property="og:image:alt" content="ZyMail App Interface">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="ZyMail">
     <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ZyMail App | Free Temporary Email Generator – No Signup">
-    <meta name="twitter:description" content="Use ZyMail App for free disposable email addresses with instant OTP receipt, QR code sharing, and privacy protection. No signup needed.">
-    <meta name="twitter:image" content="/twitter-image-app.jpg">
+    <meta name="twitter:title" content="ZyMail App | Free Temporary Email Generator">
+    <meta name="twitter:description" content="Generate free temporary email addresses instantly with ZyMail. Protect your privacy, avoid spam, receive OTPs - no signup required.">
+    <meta name="twitter:image" content="/twitter-image.jpg">
     <meta name="twitter:image:alt" content="ZyMail App Interface">
     <meta name="twitter:site" content="@ajmal_uk_">
     <meta name="twitter:creator" content="@ajmal_uk_">
-    <link rel="preload" href="/logo.png" as="image">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://zymail.pythonanywhere.com" crossorigin>
+    
+    <!-- Fonts and Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "@id": "https://zymail.pythonanywhere.com/#website",
-                "url": "https://zymail.pythonanywhere.com/",
-                "name": "ZyMail",
-                "publisher": {
-                    "@id": "https://zymail.pythonanywhere.com/#organization"
-                },
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://zymail.pythonanywhere.com/search?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://zymail.pythonanywhere.com/app#webpage",
-                "name": "ZyMail App | Free Temporary Email Generator – No Signup",
-                "url": "https://zymail.pythonanywhere.com/app",
-                "description": "ZyMail App is a free web-based application for generating temporary email addresses. Receive OTPs instantly, protect your privacy, and manage your inbox with features like QR code sharing and auto-refresh every 5 seconds. No signup required.",
-                "keywords": "temp mail app, disposable email app, free temporary email, secure temp mail, anonymous email, OTP receiver, email privacy, instant email, no signup email, temp email service, QR code email, temporary inbox, privacy protection, email masking, temp mail for verification, free disposable email, temp mail online, create temp mail, random email generator, temp mail for developers, temp mail for privacy, best free temp mail",
-                "publisher": {
-                    "@id": "https://zymail.pythonanywhere.com/#organization"
-                },
-                "mainEntityOfPage": {
-                    "@id": "https://zymail.pythonanywhere.com/#website"
-                },
-                "inLanguage": "en-US",
-                "datePublished": "2025-01-15",
-                "dateModified": "2025-07-30",
-                "breadcrumb": {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://zymail.pythonanywhere.com/"},
-                        {"@type": "ListItem", "position": 2, "name": "ZyMail App", "item": "https://zymail.pythonanywhere.com/app"}
-                    ]
-                }
-            },
-            {
-                "@type": "SoftwareApplication",
-                "@id": "https://zymail.pythonanywhere.com/app#software",
-                "name": "ZyMail App",
-                "operatingSystem": "Cross-Platform",
-                "applicationCategory": "UtilityApplication",
-                "url": "https://zymail.pythonanywhere.com/app",
-                "description": "ZyMail App is a free web-based temporary email generator that provides disposable email addresses for secure OTP receipt, privacy protection, and spam prevention. Features include QR code sharing, auto-refreshing inbox, and email download functionality.",
-                "featureList": [
-                    "Instant email generation",
-                    "No registration required",
-                    "Auto-refresh inbox every 5 seconds",
-                    "QR code sharing for cross-device access",
-                    "Disposable email addresses for privacy",
-                    "Email download functionality"
-                ],
-                "softwareVersion": "1.0",
-                "requirements": "Web browser",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD",
-                    "availability": "https://schema.org/InStock"
-                },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.8",
-                    "reviewCount": "150"
-                }
-            },
-            {
-                "@type": "Organization",
-                "@id": "https://zymail.pythonanywhere.com/#organization",
-                "name": "ZyMail",
-                "url": "https://zymail.pythonanywhere.com/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://zymail.pythonanywhere.com/logo.png",
-                    "width": 200,
-                    "height": 60
-                },
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "Customer Support",
-                    "email": "contact.uthakkan@gmail.com"
-                },
-                "sameAs": [
-                    "https://twitter.com/ajmal_uk_"
-                ]
-            },
-            {
-                "@type": "ImageObject",
-                "@id": "https://zymail.pythonanywhere.com/app#social-image",
-                "url": "https://zymail.pythonanywhere.com/og-image-app.jpg",
-                "width": 1200,
-                "height": 630,
-                "caption": "ZyMail App Interface - Temporary Email Generator"
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://zymail.pythonanywhere.com/app#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What is ZyMail App?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "ZyMail App is a free web-based temporary email generator that provides disposable email addresses for OTP receipt and privacy protection without requiring signup."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is ZyMail App free to use?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, ZyMail App is completely free with no hidden costs, offering instant access to temporary email addresses."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How does the QR code feature work in ZyMail App?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "The QR code feature generates a scannable code for your temporary email address, allowing easy sharing and access across devices."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can I download emails received in ZyMail App?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, ZyMail App allows you to download emails as text files for offline access."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How often does the inbox refresh in ZyMail App?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "The inbox auto-refreshes every 5 seconds to display new messages instantly."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is my data secure with ZyMail App?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "ZyMail App ensures privacy by using disposable email addresses not linked to personal data. Emails are deleted when the address is changed or expires."
-                        }
-                    }
-                ]
-            }
+        "@type": "SoftwareApplication",
+        "name": "ZyMail Temporary Email Generator",
+        "url": "https://zymail.pythonanywhere.com/app",
+        "description": "Free temporary email generator with disposable email addresses for privacy protection and spam prevention",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "author": {
+            "@type": "Organization",
+            "name": "Uthakkan",
+            "url": "https://zymail.pythonanywhere.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Free temporary email generation",
+            "Disposable email addresses",
+            "Privacy protection",
+            "Spam prevention",
+            "OTP receiver",
+            "No signup required",
+            "Auto-refreshing inbox",
+            "QR code sharing",
+            "Mobile-friendly interface"
         ]
     }
     </script>
-    <style>
-        :root {
-            --primary: #4F46E5;
-            --primary-dark: #4338CA;
-            --secondary: #10B981;
-            --secondary-dark: #0D9F6E;
-            --accent: #F59E0B;
-            --accent-dark: #D97706;
-            --danger: #EF4444;
-            --danger-dark: #DC2626;
-            --light: #F9FAFB;
-            --light-gray: #E5E7EB;
-            --medium-gray: #9CA3AF;
-            --dark: #111827;
-            --dark-gray: #4B5563;
-            --success: #10B981;
-            --warning: #F59E0B;
-            --info: #3B82F6;
-            --border-radius: 12px;
-            --border-radius-sm: 8px;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--light);
-            color: var(--dark-gray);
-            line-height: 1.6;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            position: relative;
-        }
-
-        .nav-bar {
-            background: white;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-
-        .nav-center {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo i {
-            font-size: 1.75rem;
-        }
-
-        .logo:hover {
-            color: var(--primary-dark);
-        }
-
-        .email-section {
-            margin: 3rem 0;
-            background: white;
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--light-gray);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .email-section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .email-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-
-        .email-display {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            background: var(--light);
-            color: var(--dark);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            font-size: 1.25rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            border: 1px dashed var(--light-gray);
-            position: relative;
-        }
-
-        #emailContainer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        #loadingIcon {
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-
-        #emailText {
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 1.5rem;
-            word-break: break-all;
-            text-align: center;
-        }
-
-        .email-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;
-        }
-
-        .controls {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        .btn {
-            padding: 0.8rem 1.75rem;
-            border-radius: var(--border-radius);
-            background: var(--primary);
-            color: white;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            font-size: 1rem;
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
-        }
-
-        .btn:focus:not(:active)::after {
-            animation: ripple 1s ease-out;
-        }
-
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(20, 20);
-                opacity: 0;
-            }
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-            background: var(--primary-dark);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn i {
-            font-size: 1rem;
-        }
-
-        .btn-qr {
-            background: var(--accent);
-        }
-
-        .btn-qr:hover {
-            background: var(--accent-dark);
-        }
-
-        .btn-copy {
-            background: var(--secondary);
-        }
-
-        .btn-copy:hover {
-            background: var(--secondary-dark);
-        }
-
-        .btn-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: white;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            position: relative;
-            border: none;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        .btn-icon:hover {
-            background: var(--light-gray);
-            transform: scale(1.1);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-icon:active {
-            transform: scale(0.98);
-        }
-
-        .btn-icon i {
-            font-size: 1.25rem;
-            color: var(--dark);
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .btn-icon.spinning i {
-            animation: rotate 1s linear infinite;
-        }
-
-        .btn-icon .fa-check,
-        .btn-copy .fa-check {
-            display: none;
-        }
-
-        .btn-icon.copied .fa-copy,
-        .btn-copy.copied .fa-copy {
-            display: none;
-        }
-
-        .btn-icon.copied .fa-check,
-        .btn-copy.copied .fa-check {
-            display: inline-block;
-        }
-
-        .btn-label {
-            font-size: 0.85rem;
-            color: var(--medium-gray);
-            text-align: center;
-            margin-top: 0.5rem;
-            font-weight: 500;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .inbox-section {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-xl);
-            overflow: hidden;
-            margin-bottom: 3rem;
-            border: 1px solid var(--light-gray);
-        }
-
-        .inbox-header {
-            background: var(--primary);
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .inbox-header h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .inbox-refresh {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .inbox-refresh:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(360deg);
-        }
-
-        .inbox-refresh i {
-            font-size: 1rem;
-        }
-
-        .messages-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .messages-table th {
-            background: var(--light);
-            font-weight: 600;
-            color: var(--dark-gray);
-            text-align: left;
-            padding: 1rem;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .messages-table td {
-            padding: 1rem;
-            border-bottom: 1px solid var(--light-gray);
-            vertical-align: top;
-        }
-
-        .messages-table tr {
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .messages-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .messages-table tr:hover {
-            background: var(--light);
-        }
-
-        .messages-table tr.read {
-            background-color: #f0f0f0;
-        }
-
-        .message-sender {
-            font-weight: 500;
-            color: var(--dark);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 200px;
-        }
-
-        .message-subject {
-            font-weight: 500;
-            color: var(--dark);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 300px;
-        }
-
-        .message-time {
-            color: var(--medium-gray);
-            font-size: 0.85rem;
-            white-space: nowrap;
-            text-align: right;
-            min-width: 80px;
-        }
-
-        .message-preview {
-            color: var(--medium-gray);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            white-space: normal;
-            word-wrap: break-word;
-            max-width: 300px;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 3rem;
-        }
-
-        .empty-state i {
-            font-size: 3rem;
-            color: var(--light-gray);
-            margin-bottom: 1rem;
-        }
-
-        .empty-state h3 {
-            font-size: 1.25rem;
-            color: var(--dark-gray);
-            margin-bottom: 0.5rem;
-        }
-
-        .empty-state p {
-            color: var(--medium-gray);
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: white;
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-xl);
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-            width: 600px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: modalFadeIn 0.3s ease;
-            overflow-y: auto;
-        }
-
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--medium-gray);
-            transition: var(--transition);
-        }
-
-        .modal-close:hover {
-            color: var(--danger);
-            transform: rotate(90deg);
-        }
-
-        .modal-title {
-            color: var(--dark);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        #qrCodeContainer {
-            margin: 1rem 0;
-            padding: 1rem;
-            border: 1px dashed var(--light-gray);
-            border-radius: var(--border-radius);
-        }
-
-        .modal-text {
-            color: var(--medium-gray);
-            font-size: 1rem;
-            margin-top: 1.5rem;
-            text-align: center;
-            word-break: break-all;
-        }
-
-        .email-detail {
-            margin-bottom: 1rem;
-            color: var(--dark-gray);
-            width: 100%;
-            text-align: left;
-        }
-
-        .email-detail strong {
-            color: var(--dark);
-            min-width: 70px;
-            display: inline-block;
-        }
-
-        .email-body {
-            background: var(--light);
-            padding: 1rem;
-            border-radius: var(--border-radius-sm);
-            border: 1px solid var(--light-gray);
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-height: 400px;
-            overflow-y: auto;
-            font-family: monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .btn-download {
-            background: var(--info);
-            margin-top: 1rem;
-        }
-
-        .btn-download:hover {
-            background: #2563eb;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--dark);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-xl);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            z-index: 3000;
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .toast.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .toast i {
-            font-size: 1.25rem;
-        }
-
-        .toast.success i {
-            color: var(--success);
-        }
-
-        .toast.error i {
-            color: var(--danger);
-        }
-
-        .toast-message {
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .nav-bar {
-                padding: 0.75rem 0;
-            }
-            .logo {
-                font-size: 1.25rem;
-            }
-            .logo i {
-                font-size: 1.5rem;
-            }
-            .email-section {
-                padding: 1.5rem;
-            }
-            .email-display {
-                padding: 1.5rem;
-            }
-            #emailText {
-                font-size: 1.2rem;
-            }
-            .btn {
-                padding: 0.7rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            .btn-icon {
-                width: 45px;
-                height: 45px;
-            }
-            .modal-content {
-                width: 90%;
-                padding: 1.5rem;
-            }
-            .message-sender {
-                max-width: 150px;
-            }
-            .message-subject, .message-preview {
-                max-width: 200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-center {
-                padding: 0 1rem;
-            }
-            .logo {
-                font-size: 1.1rem;
-            }
-            .logo i {
-                font-size: 1.25rem;
-            }
-            .email-actions {
-                flex-direction: column;
-                width: 100%;
-            }
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .controls {
-                gap: 1rem;
-            }
-            .btn-icon {
-                width: 40px;
-                height: 40px;
-            }
-            .btn-label {
-                font-size: 0.75rem;
-            }
-            .messages-table th, 
-            .messages-table td {
-                padding: 0.75rem;
-                font-size: 0.85rem;
-            }
-            .toast {
-                width: calc(100% - 2rem);
-                right: 1rem;
-                bottom: 1rem;
-            }
-            .message-sender {
-                max-width: 100px;
-            }
-            .message-subject, .message-preview {
-                max-width: 150px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="nav-bar">
-        <div class="nav-center">
-            <a href="/" class="logo"><i class="fas fa-envelope"></i> ZyMail</a>
-        </div>
-    </header>
-
-    <div id="qrModal" class="modal">
-        <div class="modal-content">
-            <button id="closeQrModal" class="modal-close" aria-label="Close QR Modal">&times;</button>
-            <h2 class="modal-title">Scan Email QR Code</h2>
-            <div id="qrCodeContainer"></div>
-            <p id="qrEmailText" class="modal-text"></p>
-        </div>
-    </div>
-
-    <div id="emailModal" class="modal">
-        <div class="modal-content">
-            <button id="closeEmailModal" class="modal-close" aria-label="Close Email Modal">&times;</button>
-            <h2 class="modal-title">Email Details</h2>
-            <div id="emailDetails">
-                <div class="email-detail">
-                    <strong>From:</strong> <span id="emailFrom"></span>
-                </div>
-                <div class="email-detail">
-                    <strong>Subject:</strong> <span id="emailSubject"></span>
-                </div>
-                <div class="email-detail">
-                    <strong>Date:</strong> <span id="emailDate"></span>
-                </div>
-                <div class="email-body" id="emailBody"></div>
-                <button id="downloadEmailBtn" class="btn btn-download" aria-label="Download Email"><i class="fas fa-download"></i> Download Email</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="toast" class="toast">
-        <i class="fas fa-check-circle"></i>
-        <span class="toast-message">Email copied to clipboard!</span>
-    </div>
-
-    <div class="container">
-        <main class="main-content">
-            <section class="email-section">
-                <div class="email-display">
-                    <div id="emailContainer">
-                        <i id="loadingIcon" class="fas fa-spinner fa-spin"></i>
-                        <span id="emailText" style="display: none;"></span>
-                    </div>
-                    <div class="email-actions">
-                        <button id="qrBtn" class="btn btn-qr" aria-label="Generate QR Code"><i class="fas fa-qrcode"></i> QR Code</button>
-                        <button id="copyBtnTop" class="btn btn-copy" aria-label="Copy Email"><i class="fas fa-copy"></i><i class="fas fa-check"></i> Copy</button>
-                    </div>
-                </div>
-                <div class="controls">
-                    <div class="btn-group">
-                        <button id="copyBtn" class="btn-icon" title="Copy Email" aria-label="Copy Email"><i class="fas fa-copy"></i><i class="fas fa-check"></i></button>
-                        <div class="btn-label">Copy</div>
-                    </div>
-                    <div class="btn-group">
-                        <button id="refreshBtn" class="btn-icon" title="Refresh Inbox" aria-label="Refresh Inbox"><i class="fas fa-sync-alt"></i></button>
-                        <div class="btn-label">Refresh</div>
-                    </div>
-                    <div class="btn-group">
-                        <button id="changeBtn" class="btn-icon" title="Change Email" aria-label="Change Email"><i class="fas fa-random"></i></button>
-                        <div class="btn-label">Change</div>
-                    </div>
-                    <div class="btn-group">
-                        <button id="deleteBtn" class="btn-icon" title="Delete Email" aria-label="Delete Email"><i class="fas fa-trash-alt"></i></button>
-                        <div class="btn-label">Delete</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="inbox-section">
-                <div class="inbox-header">
-                    <h2>Inbox Messages</h2>
-                    <button class="inbox-refresh" id="refreshInboxBtn" aria-label="Refresh Inbox"><i class="fas fa-sync-alt"></i></button>
-                </div>
-                <table class="messages-table">
-                    <thead>
-                        <tr>
-                            <th>Sender</th>
-                            <th>Subject</th>
-                        </tr>
-                    </thead>
-                    <tbody id="messagesBody">
-                        <tr>
-                            <td colspan="3" class="empty-state">
-                                <i class="fas fa-inbox"></i>
-                                <h3>Your inbox is empty</h3>
-                                <p>Use your temporary email address to sign up for services and receive messages here</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </div>
-
-    <script>
-        class TempMailReceiver {
-            constructor() {
-                this.email = null;
-                this.username = null;
-                this.domain = null;
-                this.service = null;
-                this.token = null;
-                this.checkInterval = null;
-                this.lastChecked = null;
-            }
-
-            async generateEmail() {
-                try {
-                    this.username = this.randomString(10);
-                    const domainsResponse = await fetch('https://api.mail.tm/domains');
-                    const domainsData = await domainsResponse.json();
-                    this.domain = domainsData['hydra:member'][0].domain;
-                    this.email = `${this.username}@${this.domain}`;
-                    const accountResponse = await fetch('https://api.mail.tm/accounts', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ address: this.email, password: 'temp123' })
-                    });
-                    if (accountResponse.status === 201) {
-                        const authResponse = await fetch('https://api.mail.tm/token', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ address: this.email, password: 'temp123' })
-                        });
-                        const authData = await authResponse.json();
-                        this.token = authData.token;
-                        this.service = 'MailJS';
-                        this.startChecking();
-                        return this.email;
-                    }
-                } catch (error) {
-                    console.error('Error generating email:', error);
-                    showToast('Failed to generate email. Please try again.', 'error');
-                    return null;
-                }
-            }
-
-            async checkInbox() {
-                if (!this.token) return [];
-                try {
-                    const response = await fetch('https://api.mail.tm/messages', {
-                        headers: { 'Authorization': `Bearer ${this.token}` }
-                    });
-                    if (response.ok) {
-                        const data = await response.json();
-                        this.lastChecked = new Date();
-                        const messages = data['hydra:member'] || [];
-                        this.saveMessagesToLocalStorage(messages);
-                        return messages;
-                    } else {
-                        showToast('Failed to check inbox. Please try again later.', 'error');
-                        return this.getMessagesFromLocalStorage();
-                    }
-                } catch (error) {
-                    console.error('Inbox error:', error);
-                    showToast('An error occurred while checking the inbox.', 'error');
-                    return this.getMessagesFromLocalStorage();
-                }
-            }
-
-            async getMessageDetails(id) {
-                try {
-                    const response = await fetch(`https://api.mail.tm/messages/${id}`, {
-                        headers: { 'Authorization': `Bearer ${this.token}` }
-                    });
-                    if (response.ok) {
-                        return await response.json();
-                    }
-                    return null;
-                } catch (error) {
-                    console.error('Error fetching message:', error);
-                    return null;
-                }
-            }
-
-            startChecking() {
-                if (this.checkInterval) clearInterval(this.checkInterval);
-                this.checkInterval = setInterval(async () => {
-                    const messages = await this.checkInbox();
-                    updateInbox(messages);
-                }, 5000);
-            }
-
-            stopChecking() {
-                if (this.checkInterval) clearInterval(this.checkInterval);
-            }
-
-            randomString(length) {
-                const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-                let result = '';
-                for (let i = 0; i < length; i++) {
-                    result += chars.charAt(Math.floor(Math.random() * chars.length));
-                }
-                return result;
-            }
-
-            saveMessagesToLocalStorage(messages) {
-                if (this.email) {
-                    localStorage.setItem(`messages_${this.email}`, JSON.stringify(messages));
-                }
-            }
-
-            getMessagesFromLocalStorage() {
-                if (this.email) {
-                    const savedMessages = localStorage.getItem(`messages_${this.email}`);
-                    return savedMessages ? JSON.parse(savedMessages) : [];
-                }
-                return [];
-            }
-
-            clearMessagesFromLocalStorage() {
-                if (this.email) {
-                    localStorage.removeItem(`messages_${this.email}`);
-                }
-            }
-        }
-
-        const tempMail = new TempMailReceiver();
-        const emailText = document.getElementById('emailText');
-        const loadingIcon = document.getElementById('loadingIcon');
-        const copyBtnTop = document.getElementById('copyBtnTop');
-        const qrBtn = document.getElementById('qrBtn');
-        const copyBtn = document.getElementById('copyBtn');
-        const refreshBtn = document.getElementById('refreshBtn');
-        const refreshInboxBtn = document.getElementById('refreshInboxBtn');
-        const changeBtn = document.getElementById('changeBtn');
-        const deleteBtn = document.getElementById('deleteBtn');
-        const messagesBody = document.getElementById('messagesBody');
-        const qrModal = document.getElementById('qrModal');
-        const qrCodeContainer = document.getElementById('qrCodeContainer');
-        const qrEmailText = document.getElementById('qrEmailText');
-        const closeQrModal = document.getElementById('closeQrModal');
-        const emailModal = document.getElementById('emailModal');
-        const emailFrom = document.getElementById('emailFrom');
-        const emailSubject = document.getElementById('emailSubject');
-        const emailDate = document.getElementById('emailDate');
-        const emailBody = document.getElementById('emailBody');
-        const downloadEmailBtn = document.getElementById('downloadEmailBtn');
-        const closeEmailModal = document.getElementById('closeEmailModal');
-        const toast = document.getElementById('toast');
-
-        function saveEmailToLocalStorage(email) {
-            localStorage.setItem('tempEmail', email);
-        }
-
-        async function loadOrGenerateEmail() {
-            const savedEmail = localStorage.getItem('tempEmail');
-            if (savedEmail) {
-                tempMail.email = savedEmail;
-                const [username, domain] = savedEmail.split('@');
-                tempMail.username = username;
-                tempMail.domain = domain;
-                const authResponse = await fetch('https://api.mail.tm/token', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ address: savedEmail, password: 'temp123' })
-                });
-                if (authResponse.ok) {
-                    const authData = await authResponse.json();
-                    tempMail.token = authData.token;
-                    tempMail.startChecking();
-                    const savedMessages = tempMail.getMessagesFromLocalStorage();
-                    updateInbox(savedMessages);
-                    return savedEmail;
-                } else {
-                    localStorage.removeItem('tempEmail');
-                    tempMail.clearMessagesFromLocalStorage();
-                    return await tempMail.generateEmail();
-                }
-            } else {
-                const newEmail = await tempMail.generateEmail();
-                if (newEmail) {
-                    saveEmailToLocalStorage(newEmail);
-                }
-                return newEmail;
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            const email = await loadOrGenerateEmail();
-            if (email) {
-                loadingIcon.style.display = 'none';
-                emailText.textContent = email;
-                emailText.style.display = 'inline';
-            } else {
-                loadingIcon.style.display = 'none';
-                emailText.textContent = 'Failed to generate email';
-                emailText.style.display = 'inline';
-            }
-        });
-
-        function copyEmail(button) {
-            if (tempMail.email) {
-                navigator.clipboard.writeText(tempMail.email).then(() => {
-                    button.classList.add('copied');
-                    showToast('Email copied to clipboard!', 'success');
-                    setTimeout(() => {
-                        button.classList.remove('copied');
-                    }, 3000);
-                }).catch(() => {
-                    showToast('Failed to copy email', 'error');
-                });
-            } else {
-                showToast('No email to copy', 'error');
-            }
-        }
-
-        copyBtnTop.addEventListener('click', () => copyEmail(copyBtnTop));
-        copyBtn.addEventListener('click', () => copyEmail(copyBtn));
-
-        qrBtn.addEventListener('click', () => {
-            if (!tempMail.email) {
-                showToast('No email to generate QR code', 'error');
-                return;
-            }
-            qrCodeContainer.innerHTML = '';
-            new QRCode(qrCodeContainer, {
-                text: tempMail.email,
-                width: 200,
-                height: 200,
-                colorDark: "#1C2526",
-                colorLight: "#F5F7FA",
-                correctLevel: QRCode.CorrectLevel.H
-            });
-            qrEmailText.textContent = tempMail.email;
-            qrModal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeQrModal.addEventListener('click', () => {
-            qrModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        qrModal.addEventListener('click', (e) => {
-            if (e.target === qrModal) {
-                qrModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        messagesBody.addEventListener('click', async (e) => {
-            const tr = e.target.closest('tr');
-            if (tr && tr.hasAttribute('data-message-id')) {
-                tr.classList.add('read');
-                const messageId = tr.getAttribute('data-message-id');
-                const message = await tempMail.getMessageDetails(messageId);
-                if (message) {
-                    showEmailModal(message);
-                } else {
-                    showToast('Failed to load email details', 'error');
-                }
-            }
-        });
-
-        function showEmailModal(message) {
-            emailFrom.textContent = message.from.address || 'Unknown';
-            emailSubject.textContent = message.subject || 'No Subject';
-            const date = new Date(message.createdAt || new Date());
-            emailDate.textContent = date.toLocaleString();
-            emailBody.textContent = message.text || 'No content available';
-            emailModal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        downloadEmailBtn.addEventListener('click', () => {
-            const emailContent = `From: ${emailFrom.textContent}\nSubject: ${emailSubject.textContent}\nDate: ${emailDate.textContent}\n\n${emailBody.textContent}`;
-            const blob = new Blob([emailContent], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `${emailSubject.textContent || 'email'}.txt`;
-            a.click();
-            URL.revokeObjectURL(url);
-            showToast('Email downloaded successfully!', 'success');
-        });
-
-        closeEmailModal.addEventListener('click', () => {
-            emailModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        emailModal.addEventListener('click', (e) => {
-            if (e.target === emailModal) {
-                emailModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        function showToast(message, type) {
-            const toastIcon = toast.querySelector('i');
-            toast.className = 'toast';
-            toast.classList.add(type);
-            if (type === 'success') {
-                toastIcon.className = 'fas fa-check-circle';
-            } else {
-                toastIcon.className = 'fas fa-exclamation-circle';
-            }
-            toast.querySelector('.toast-message').textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        refreshBtn.addEventListener('click', async () => {
-            refreshBtn.classList.add('spinning');
-            refreshInboxBtn.classList.add('spinning');
-            try {
-                const messages = await tempMail.checkInbox();
-                updateInbox(messages);
-                showToast('Inbox refreshed', 'success');
-            } catch (error) {
-                showToast('Failed to refresh inbox', 'error');
-            } finally {
-                setTimeout(() => {
-                    refreshBtn.classList.remove('spinning');
-                    refreshInboxBtn.classList.remove('spinning');
-                }, 1000);
-            }
-        });
-
-        refreshInboxBtn.addEventListener('click', async () => {
-            refreshBtn.classList.add('spinning');
-            refreshInboxBtn.classList.add('spinning');
-            const messages = await tempMail.checkInbox();
-            updateInbox(messages);
-            setTimeout(() => {
-                refreshBtn.classList.remove('spinning');
-                refreshInboxBtn.classList.remove('spinning');
-            }, 1000);
-        });
-
-        changeBtn.addEventListener('click', async () => {
-            if (!confirm('Are you sure you want to change your temporary email? All current messages will be lost.')) return;
-            tempMail.stopChecking();
-            tempMail.clearMessagesFromLocalStorage();
-            loadingIcon.style.display = 'inline';
-            emailText.style.display = 'none';
-            const email = await tempMail.generateEmail();
-            if (email) {
-                saveEmailToLocalStorage(email);
-                loadingIcon.style.display = 'none';
-                emailText.textContent = email;
-                emailText.style.display = 'inline';
-                updateInbox([]);
-                showToast('New temporary email generated!', 'success');
-            } else {
-                loadingIcon.style.display = 'none';
-                emailText.textContent = 'Failed to generate email';
-                emailText.style.display = 'inline';
-                showToast('Failed to generate new email', 'error');
-            }
-        });
-
-        deleteBtn.addEventListener('click', () => {
-            if (!confirm('Are you sure you want to delete your temporary email? All messages will be lost.')) return;
-            tempMail.stopChecking();
-            tempMail.clearMessagesFromLocalStorage();
-            localStorage.removeItem('tempEmail');
-            emailText.textContent = 'Email deleted - generate a new one';
-            messagesBody.innerHTML = `
-                <tr>
-                    <td colspan="3" class="empty-state">
-                        <i class="fas fa-inbox"></i>
-                        <h3>Your inbox is empty</h3>
-                        <p>Generate a new temporary email address to receive messages</p>
-                    </td>
-                </tr>
-            `;
-            showToast('Temporary email deleted', 'success');
-        });
-
-        function updateInbox(messages) {
-            messagesBody.innerHTML = '';
-            if (messages.length === 0) {
-                messagesBody.innerHTML = `
-                    <tr>
-                        <td colspan="3" class="empty-state">
-                            <i class="fas fa-inbox"></i>
-                            <h3>Your inbox is empty</h3>
-                            <p>Use your temporary email address to sign up for services and receive messages here</p>
-                        </td>
-                    </tr>
-                `;
-                return;
-            }
-            messages.forEach(msg => {
-                const from = msg.from && msg.from.address ? msg.from.address : 'Unknown';
-                const subject = msg.subject || 'No Subject';
-                const date = new Date(msg.createdAt || new Date());
-                const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                const tr = document.createElement('tr');
-                tr.setAttribute('data-message-id', msg.id);
-                if (msg.seen) tr.classList.add('read');
-                tr.innerHTML = `
-                    <td>
-                        <div class="message-sender">${from}</div>
-                    </td>
-                    <td>
-                        <div class="message-subject">${subject}</div>
-                    </td>
-                    <td>
-                        <div class="message-time">${timeString}</div>
-                    </td>
-                `;
-                messagesBody.appendChild(tr);
-            });
-        }
-    </script>
-</body>
-</html>
+	    <style>
+	        :root {
+	            --primary: #4F46E5;
+	            --primary-dark: #4338CA;
+	            --secondary: #10B981;
+	            --secondary-dark: #0D9F6E;
+	            --accent: #F59E0B;
+	            --accent-dark: #D97706;
+	            --danger: #EF4444;
+	            --danger-dark: #DC2626;
+	            --light: #F9FAFB;
+	            --light-gray: #E5E7EB;
+	            --medium-gray: #9CA3AF;
+	            --dark: #111827;
+	            --dark-gray: #4B5563;
+	            --success: #10B981;
+	            --warning: #F59E0B;
+	            --info: #3B82F6;
+	            --border-radius: 12px;
+	            --border-radius-sm: 8px;
+	            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	            --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.1);
+	            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+	            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
+	            --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+	        }
+	        * {
+	            margin: 0;
+	            padding: 0;
+	            box-sizing: border-box;
+	        }
+	        body {
+	            font-family: 'Inter', sans-serif;
+	            background-color: var(--light);
+	            color: var(--dark-gray);
+	            line-height: 1.6;
+	            padding: 0;
+	            -webkit-font-smoothing: antialiased;
+	            -moz-osx-font-smoothing: grayscale;
+	        }
+	        .container {
+	            max-width: 1200px;
+	            margin: 0 auto;
+	            padding: 0 1.5rem;
+	            position: relative;
+	        }
+	        .nav-bar {
+	            background: white;
+	            box-shadow: var(--shadow);
+	            position: sticky;
+	            top: 0;
+	            z-index: 1000;
+	            padding: 1rem 0;
+	        }
+	        .nav-center {
+	            max-width: 1200px;
+	            margin: 0 auto;
+	            padding: 0 1.5rem;
+	            display: flex;
+	            align-items: center;
+	            justify-content: center;
+	        }
+	        .logo {
+	            font-size: 1.5rem;
+	            font-weight: 700;
+	            color: var(--primary);
+	            text-decoration: none;
+	            display: flex;
+	            align-items: center;
+	            gap: 0.5rem;
+	        }
+	        .logo i {
+	            font-size: 1.75rem;
+	        }
+	        .logo:hover {
+	            color: var(--primary-dark);
+	        }
+	        .email-section {
+	            margin: 3rem 0;
+	            background: white;
+	            padding: 2.5rem;
+	            border-radius: var(--border-radius);
+	            box-shadow: var(--shadow-xl);
+	            border: 1px solid var(--light-gray);
+	            position: relative;
+	            overflow: hidden;
+	            transition: var(--transition);
+	        }
+	        .email-section:hover {
+	            transform: translateY(-5px);
+	            box-shadow: var(--shadow-lg);
+	        }
+	        .email-section::before {
+	            content: '';
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            right: 0;
+	            height: 4px;
+	            background: linear-gradient(90deg, var(--primary), var(--accent));
+	        }
+	        .email-display {
+	            display: flex;
+	            flex-direction: column;
+	            align-items: center;
+	            justify-content: center;
+	            gap: 1.5rem;
+	            background: var(--light);
+	            color: var(--dark);
+	            padding: 2rem;
+	            border-radius: var(--border-radius);
+	            font-size: 1.25rem;
+	            text-align: center;
+	            margin-bottom: 1.5rem;
+	            border: 1px dashed var(--light-gray);
+	            position: relative;
+	            width: 100%;
+	            overflow: hidden;
+	        }
+	        #emailContainer {
+	            display: flex;
+	            align-items: center;
+	            justify-content: center;
+	            gap: 1rem;
+	            flex-wrap: wrap;
+	            width: 100%;
+	        }
+	        #loadingIcon {
+	            color: var(--primary);
+	            font-size: 1.5rem;
+	        }
+	        #emailText {
+	            font-weight: 600;
+	            color: var(--primary);
+	            font-size: 1.5rem;
+	            word-break: break-all;
+	            text-align: center;
+	            max-width: 100%;
+	        }
+	        .email-actions {
+	            display: flex;
+	            gap: 1rem;
+	            justify-content: center;
+	            flex-wrap: nowrap;
+	            width: 100%;
+	        }
+	        .controls {
+	            display: flex;
+	            gap: 1rem;
+	            justify-content: center;
+	            flex-wrap: nowrap;
+	            margin-top: 1.5rem;
+	            padding: 0.5rem;
+	        }
+	        .btn {
+	            padding: 0.8rem 1.75rem;
+	            border-radius: var(--border-radius);
+	            background: var(--primary);
+	            color: white;
+	            font-weight: 600;
+	            display: inline-flex;
+	            align-items: center;
+	            gap: 0.75rem;
+	            transition: var(--transition);
+	            border: none;
+	            cursor: pointer;
+	            box-shadow: var(--shadow);
+	            position: relative;
+	            overflow: hidden;
+	            font-size: 1rem;
+	            white-space: nowrap;
+	        }
+	        .btn::after {
+	            content: '';
+	            position: absolute;
+	            top: 50%;
+	            left: 50%;
+	            width: 5px;
+	            height: 5px;
+	            background: rgba(255, 255, 255, 0.5);
+	            opacity: 0;
+	            border-radius: 100%;
+	            transform: scale(1, 1) translate(-50%);
+	            transform-origin: 50% 50%;
+	        }
+	        .btn:focus:not(:active)::after {
+	            animation: ripple 1s ease-out;
+	        }
+	        @keyframes ripple {
+	            0% {
+	                transform: scale(0, 0);
+	                opacity: 0.5;
+	            }
+	            100% {
+	                transform: scale(20, 20);
+	                opacity: 0;
+	            }
+	        }
+	        .btn:hover {
+	            transform: translateY(-2px);
+	            box-shadow: var(--shadow-md);
+	            background: var(--primary-dark);
+	        }
+	        .btn:active {
+	            transform: translateY(0);
+	        }
+	        .btn i {
+	            font-size: 1rem;
+	        }
+	        .btn-qr {
+	            background: var(--accent);
+	        }
+	        .btn-qr:hover {
+	            background: var(--accent-dark);
+	        }
+	        .btn-copy {
+	            background: var(--secondary);
+	        }
+	        .btn-copy:hover {
+	            background: var(--secondary-dark);
+	        }
+	        .btn-icon {
+	            width: 45px;
+	            height: 45px;
+	            border-radius: 50%;
+	            background: white;
+	            box-shadow: var(--shadow);
+	            display: flex;
+	            align-items: center;
+	            justify-content: center;
+	            transition: var(--transition);
+	            position: relative;
+	            border: none;
+	            cursor: pointer;
+	            color: var(--dark);
+	            flex-shrink: 0;
+	        }
+	        .btn-icon:hover {
+	            background: var(--light-gray);
+	            transform: scale(1.1);
+	            box-shadow: var(--shadow-md);
+	        }
+	        .btn-icon:active {
+	            transform: scale(0.98);
+	        }
+	        .btn-icon i {
+	            font-size: 1.1rem;
+	            color: var(--dark);
+	        }
+	        @keyframes rotate {
+	            from { transform: rotate(0deg); }
+	            to { transform: rotate(360deg); }
+	        }
+	        .btn-icon.spinning i {
+	            animation: rotate 1s linear infinite;
+	        }
+	        .btn-icon .fa-check,
+	        .btn-copy .fa-check {
+	            display: none;
+	        }
+	        .btn-icon.copied .fa-copy,
+	        .btn-copy.copied .fa-copy {
+	            display: none;
+	        }
+	        .btn-icon.copied .fa-check,
+	        .btn-copy.copied .fa-check {
+	            display: inline-block;
+	        }
+	        .btn-label {
+	            font-size: 0.75rem;
+	            color: var(--medium-gray);
+	            text-align: center;
+	            margin-top: 0.3rem;
+	            font-weight: 500;
+	            white-space: nowrap;
+	        }
+	        .btn-group {
+	            display: flex;
+	            flex-direction: column;
+	            align-items: center;
+	            gap: 0.3rem;
+	        }
+	        .inbox-section {
+	            background: white;
+	            border-radius: var(--border-radius);
+	            box-shadow: var(--shadow-xl);
+	            overflow: hidden;
+	            margin-bottom: 3rem;
+	            border: 1px solid var(--light-gray);
+	        }
+	        .inbox-header {
+	            background: var(--primary);
+	            color: white;
+	            padding: 1rem;
+	            display: flex;
+	            justify-content: space-between;
+	            align-items: center;
+	        }
+	        .inbox-header h2 {
+	            font-size: 1.25rem;
+	            font-weight: 600;
+	            margin: 0;
+	        }
+	        .inbox-refresh {
+	            background: rgba(255, 255, 255, 0.2);
+	            border: none;
+	            color: white;
+	            width: 36px;
+	            height: 36px;
+	            border-radius: 50%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: center;
+	            cursor: pointer;
+	            transition: var(--transition);
+	        }
+	        .inbox-refresh:hover {
+	            background: rgba(255, 255, 255, 0.3);
+	            transform: rotate(360deg);
+	        }
+	        .inbox-refresh i {
+	            font-size: 1rem;
+	        }
+	        .messages-table {
+	            width: 100%;
+	            border-collapse: collapse;
+	        }
+	        .messages-table th {
+	            background: var(--light);
+	            font-weight: 600;
+	            color: var(--dark-gray);
+	            text-align: left;
+	            padding: 1rem;
+	            border-bottom: 1px solid var(--light-gray);
+	        }
+	        .messages-table td {
+	            padding: 1rem;
+	            border-bottom: 1px solid var(--light-gray);
+	            vertical-align: top;
+	        }
+	        .messages-table tr {
+	            cursor: pointer;
+	            transition: var(--transition);
+	        }
+	        .messages-table tr:last-child td {
+	            border-bottom: none;
+	        }
+	        .messages-table tr:hover {
+	            background: var(--light);
+	        }
+	        .messages-table tr.read {
+	            background-color: #f0f0f0;
+	        }
+	        .message-sender {
+	            font-weight: 500;
+	            color: var(--dark);
+	            white-space: nowrap;
+	            overflow: hidden;
+	            text-overflow: ellipsis;
+	            max-width: 200px;
+	        }
+	        .message-subject {
+	            font-weight: 500;
+	            color: var(--dark);
+	            white-space: nowrap;
+	            overflow: hidden;
+	            text-overflow: ellipsis;
+	            max-width: 300px;
+	        }
+	        .message-time {
+	            color: var(--medium-gray);
+	            font-size: 0.85rem;
+	            white-space: nowrap;
+	            text-align: right;
+	            min-width: 80px;
+	        }
+	        .message-preview {
+	            color: var(--medium-gray);
+	            font-size: 0.9rem;
+	            margin-top: 0.5rem;
+	            display: -webkit-box;
+	            -webkit-line-clamp: 2;
+	            line-clamp: 2;
+	            -webkit-box-orient: vertical;
+	            overflow: hidden;
+	            white-space: normal;
+	            word-wrap: break-word;
+	            max-width: 300px;
+	        }
+	        .empty-state {
+	            text-align: center;
+	            padding: 3rem;
+	        }
+	        .empty-state i {
+	            font-size: 3rem;
+	            color: var(--light-gray);
+	            margin-bottom: 1rem;
+	        }
+	        .empty-state h3 {
+	            font-size: 1.25rem;
+	            color: var(--dark-gray);
+	            margin-bottom: 0.5rem;
+	        }
+	        .empty-state p {
+	            color: var(--medium-gray);
+	            max-width: 400px;
+	            margin: 0 auto;
+	        }
+	        .modal {
+	            display: none;
+	            position: fixed;
+	            top: 0;
+	            left: 0;
+	            width: 100vw;
+	            height: 100vh;
+	            background: rgba(0, 0, 0, 0.5);
+	            z-index: 2000;
+	            align-items: center;
+	            justify-content: center;
+	            backdrop-filter: blur(5px);
+	        }
+	        .modal-content {
+	            background: white;
+	            padding: 2rem;
+	            border-radius: var(--border-radius);
+	            box-shadow: var(--shadow-xl);
+	            position: relative;
+	            max-width: 90vw;
+	            max-height: 90vh;
+	            width: 600px;
+	            display: flex;
+	            flex-direction: column;
+	            animation: modalFadeIn 0.3s ease;
+	            overflow: hidden;
+	        }
+	        @keyframes modalFadeIn {
+	            from {
+	                opacity: 0;
+	                transform: translateY(-20px);
+	            }
+	            to {
+	                opacity: 1;
+	                transform: translateY(0);
+	            }
+	        }
+	        .modal-close {
+	            position: absolute;
+	            top: 1rem;
+	            right: 1rem;
+	            background: none;
+	            border: none;
+	            font-size: 1.5rem;
+	            cursor: pointer;
+	            color: var(--medium-gray);
+	            transition: var(--transition);
+	            z-index: 10;
+	        }
+	        .modal-close:hover {
+	            color: var(--danger);
+	            transform: rotate(90deg);
+	        }
+	        .modal-title {
+	            color: var(--dark);
+	            font-size: 1.5rem;
+	            margin-bottom: 1.5rem;
+	            font-weight: 700;
+	            text-align: center;
+	        }
+	        #qrCodeContainer {
+	            margin: 1rem 0;
+	            padding: 1rem;
+	            border: 1px dashed var(--light-gray);
+	            border-radius: var(--border-radius);
+	            display: flex;
+	            justify-content: center;
+	        }
+	        .modal-text {
+	            color: var(--medium-gray);
+	            font-size: 1rem;
+	            margin-top: 1.5rem;
+	            text-align: center;
+	            word-break: break-all;
+	            padding: 0 1rem;
+	        }
+	        .email-details-container {
+	            width: 100%;
+	            overflow-y: auto;
+	            max-height: 70vh;
+	            padding-right: 0.5rem;
+	        }
+	        .email-details-container::-webkit-scrollbar {
+	            width: 6px;
+	        }
+	        .email-details-container::-webkit-scrollbar-track {
+	            background: var(--light-gray);
+	            border-radius: 3px;
+	        }
+	        .email-details-container::-webkit-scrollbar-thumb {
+	            background: var(--medium-gray);
+	            border-radius: 3px;
+	        }
+	        .email-details-container::-webkit-scrollbar-thumb:hover {
+	            background: var(--dark-gray);
+	        }
+	        .email-detail {
+	            margin-bottom: 1rem;
+	            color: var(--dark-gray);
+	            width: 100%;
+	            text-align: left;
+	            padding: 0.5rem 0;
+	            border-bottom: 1px solid var(--light-gray);
+	        }
+	        .email-detail:last-child {
+	            border-bottom: none;
+	        }
+	        .email-detail strong {
+	            color: var(--dark);
+	            min-width: 70px;
+	            display: inline-block;
+	            font-weight: 600;
+	        }
+	        .email-body {
+	            background: var(--light);
+	            padding: 1rem;
+	            border-radius: var(--border-radius-sm);
+	            border: 1px solid var(--light-gray);
+	            white-space: pre-wrap;
+	            word-wrap: break-word;
+	            overflow-wrap: break-word;
+	            max-height: 300px;
+	            overflow-y: auto;
+	            font-family: 'Courier New', monospace;
+	            font-size: 0.9rem;
+	            line-height: 1.5;
+	            width: 100%;
+	            box-sizing: border-box;
+	            color: var(--dark-gray);
+	        }
+	        .email-body::-webkit-scrollbar {
+	            width: 6px;
+	        }
+	        .email-body::-webkit-scrollbar-track {
+	            background: var(--light-gray);
+	            border-radius: 3px;
+	        }
+	        .email-body::-webkit-scrollbar-thumb {
+	            background: var(--medium-gray);
+	            border-radius: 3px;
+	        }
+	        .email-body::-webkit-scrollbar-thumb:hover {
+	            background: var(--dark-gray);
+	        }
+	        .btn-download {
+	            background: var(--info);
+	            margin-top: 1.5rem;
+	            align-self: center;
+	        }
+	        .btn-download:hover {
+	            background: #2563eb;
+	        }
+	        .toast {
+	            position: fixed;
+	            bottom: 2rem;
+	            right: 2rem;
+	            background: var(--dark);
+	            color: white;
+	            padding: 1rem 1.5rem;
+	            border-radius: var(--border-radius);
+	            box-shadow: var(--shadow-xl);
+	            display: flex;
+	            align-items: center;
+	            gap: 1rem;
+	            z-index: 3000;
+	            transform: translateY(100px);
+	            opacity: 0;
+	            transition: all 0.3s ease;
+	        }
+	        .toast.show {
+	            transform: translateY(0);
+	            opacity: 1;
+	        }
+	        .toast i {
+	            font-size: 1.25rem;
+	        }
+	        .toast.success i {
+	            color: var(--success);
+	        }
+	        .toast.error i {
+	            color: var(--danger);
+	        }
+	        .toast-message {
+	            font-size: 0.9rem;
+	            font-weight: 500;
+	        }
+	        @media (max-width: 768px) {
+	            .nav-bar {
+	                padding: 0.75rem 0;
+	            }
+	            .logo {
+	                font-size: 1.25rem;
+	            }
+	            .logo i {
+	                font-size: 1.5rem;
+	            }
+	            .email-section {
+	                padding: 1.5rem;
+	            }
+	            .email-display {
+	                padding: 1.5rem;
+	            }
+	            #emailText {
+	                font-size: 1.2rem;
+	            }
+	            .btn {
+	                padding: 0.7rem 1.2rem;
+	                font-size: 0.9rem;
+	            }
+	            .btn-icon {
+	                width: 40px;
+	                height: 40px;
+	            }
+	            .modal-content {
+	                width: 90%;
+	                padding: 1.5rem;
+	                max-height: 85vh;
+	            }
+	            .modal-title {
+	                font-size: 1.3rem;
+	                margin-bottom: 1rem;
+	            }
+	            .email-details-container {
+	                max-height: 60vh;
+	            }
+	            .email-body {
+	                max-height: 250px;
+	                font-size: 0.85rem;
+	            }
+	            .message-sender {
+	                max-width: 150px;
+	            }
+	            .message-subject, .message-preview {
+	                max-width: 200px;
+	            }
+	            /* Mobile adjustments for controls */
+	            .controls {
+	                gap: 0.8rem;
+	                padding: 0.3rem;
+	            }
+	            .btn-icon {
+	                width: 38px;
+	                height: 38px;
+	            }
+	            .btn-icon i {
+	                font-size: 1rem;
+	            }
+	            .btn-label {
+	                font-size: 0.7rem;
+	            }
+	        }
+	        @media (max-width: 480px) {
+	            .nav-center {
+	                padding: 0 1rem;
+	            }
+	            .logo {
+	                font-size: 1.1rem;
+	            }
+	            .logo i {
+	                font-size: 1.25rem;
+	            }
+	            /* Keep email-actions buttons in one row on mobile */
+	            .email-actions {
+	                flex-direction: row;
+	                flex-wrap: nowrap;
+	                overflow-x: auto;
+	                -webkit-overflow-scrolling: touch;
+	                padding-bottom: 8px;
+	                margin: 0 -1rem;
+	                padding-left: 1rem;
+	                padding-right: 1rem;
+	            }
+	            .email-actions .btn {
+	                flex: 0 0 auto;
+	                min-width: 140px;
+	            }
+	            .controls {
+	                flex-wrap: wrap;
+	                gap: 0.6rem;
+	                justify-content: space-around;
+	            }
+	            .btn-icon {
+	                width: 36px;
+	                height: 36px;
+	            }
+	            .btn-label {
+	                font-size: 0.65rem;
+	            }
+	            .messages-table th, 
+	            .messages-table td {
+	                padding: 0.75rem;
+	                font-size: 0.85rem;
+	            }
+	            .toast {
+	                width: calc(100% - 2rem);
+	                right: 1rem;
+	                bottom: 1rem;
+	            }
+	            .message-sender {
+	                max-width: 100px;
+	            }
+	            .message-subject, .message-preview {
+	                max-width: 150px;
+	            }
+	            /* Further mobile adjustments */
+	            .email-display {
+	                padding: 1.2rem;
+	            }
+	            #emailText {
+	                font-size: 1.1rem;
+	            }
+	            .modal-content {
+	                width: 95%;
+	                padding: 1rem;
+	                max-height: 90vh;
+	            }
+	            .modal-title {
+	                font-size: 1.2rem;
+	                margin-bottom: 0.8rem;
+	            }
+	            .email-details-container {
+	                max-height: 65vh;
+	            }
+	            .email-body {
+	                max-height: 200px;
+	                font-size: 0.8rem;
+	                padding: 0.8rem;
+	            }
+	            .email-detail {
+	                margin-bottom: 0.8rem;
+	                font-size: 0.9rem;
+	            }
+	            .btn-download {
+	                margin-top: 1rem;
+	                padding: 0.7rem 1.2rem;
+	                font-size: 0.9rem;
+	            }
+	        }
+	    </style>
+	</head>
+	<body>
+	    <header class="nav-bar">
+	        <div class="nav-center">
+	            <a href="/" class="logo"><i class="fas fa-envelope"></i> ZyMail</a>
+	        </div>
+	    </header>
+	    <div id="qrModal" class="modal">
+	        <div class="modal-content">
+	            <button id="closeQrModal" class="modal-close" aria-label="Close QR Modal">&times;</button>
+	            <h2 class="modal-title">Scan Email QR Code</h2>
+	            <div id="qrCodeContainer"></div>
+	            <p id="qrEmailText" class="modal-text"></p>
+	        </div>
+	    </div>
+	    <div id="emailModal" class="modal">
+	        <div class="modal-content">
+	            <button id="closeEmailModal" class="modal-close" aria-label="Close Email Modal">&times;</button>
+	            <h2 class="modal-title">Email Details</h2>
+	            <div class="email-details-container">
+	                <div class="email-detail">
+	                    <strong>From:</strong> <span id="emailFrom"></span>
+	                </div>
+	                <div class="email-detail">
+	                    <strong>Subject:</strong> <span id="emailSubject"></span>
+	                </div>
+	                <div class="email-detail">
+	                    <strong>Date:</strong> <span id="emailDate"></span>
+	                </div>
+	                <div class="email-body" id="emailBody"></div>
+	            </div>
+	            <button id="downloadEmailBtn" class="btn btn-download" aria-label="Download Email"><i class="fas fa-download"></i> Download Email</button>
+	        </div>
+	    </div>
+	    <div id="toast" class="toast">
+	        <i class="fas fa-check-circle"></i>
+	        <span class="toast-message">Email copied to clipboard!</span>
+	    </div>
+	    <div class="container">
+	        <main class="main-content">
+	            <section class="email-section">
+	                <div class="email-display">
+	                    <div id="emailContainer">
+	                        <i id="loadingIcon" class="fas fa-spinner fa-spin"></i>
+	                        <span id="emailText" style="display: none;"></span>
+	                    </div>
+	                    <div class="email-actions">
+	                        <button id="qrBtn" class="btn btn-qr" aria-label="Generate QR Code"><i class="fas fa-qrcode"></i> QR Code</button>
+	                        <button id="copyBtnTop" class="btn btn-copy" aria-label="Copy Email"><i class="fas fa-copy"></i><i class="fas fa-check"></i> Copy</button>
+	                    </div>
+	                </div>
+	                <div class="controls">
+	                    <div class="btn-group">
+	                        <button id="copyBtn" class="btn-icon" title="Copy Email" aria-label="Copy Email"><i class="fas fa-copy"></i><i class="fas fa-check"></i></button>
+	                        <div class="btn-label">Copy</div>
+	                    </div>
+	                    <div class="btn-group">
+	                        <button id="refreshBtn" class="btn-icon" title="Refresh Inbox" aria-label="Refresh Inbox"><i class="fas fa-sync-alt"></i></button>
+	                        <div class="btn-label">Refresh</div>
+	                    </div>
+	                    <div class="btn-group">
+	                        <button id="changeBtn" class="btn-icon" title="Change Email" aria-label="Change Email"><i class="fas fa-random"></i></button>
+	                        <div class="btn-label">Change</div>
+	                    </div>
+	                    <div class="btn-group">
+	                        <button id="deleteBtn" class="btn-icon" title="Delete Email" aria-label="Delete Email"><i class="fas fa-trash-alt"></i></button>
+	                        <div class="btn-label">Delete</div>
+	                    </div>
+	                </div>
+	            </section>
+	            <section class="inbox-section">
+	                <div class="inbox-header">
+	                    <h2>Inbox Messages</h2>
+	                    <button class="inbox-refresh" id="refreshInboxBtn" aria-label="Refresh Inbox"><i class="fas fa-sync-alt"></i></button>
+	                </div>
+	                <table class="messages-table">
+	                    <thead>
+	                        <tr>
+	                            <th>Sender</th>
+	                            <th>Subject</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody id="messagesBody">
+	                        <tr>
+	                            <td colspan="3" class="empty-state">
+	                                <i class="fas fa-inbox"></i>
+	                                <h3>Your inbox is empty</h3>
+	                                <p>Use your temporary email address to sign up for services and receive messages here</p>
+	                            </td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	            </section>
+	        </main>
+	    </div>
+	    <script>
+	        class TempMailReceiver {
+	            constructor() {
+	                this.email = null;
+	                this.username = null;
+	                this.domain = null;
+	                this.service = null;
+	                this.token = null;
+	                this.checkInterval = null;
+	                this.lastChecked = null;
+	            }
+	            async generateEmail() {
+	                try {
+	                    this.username = this.randomString(10);
+	                    const domainsResponse = await fetch('https://api.mail.tm/domains');
+	                    const domainsData = await domainsResponse.json();
+	                    this.domain = domainsData['hydra:member'][0].domain;
+	                    this.email = `${this.username}@${this.domain}`;
+	                    const accountResponse = await fetch('https://api.mail.tm/accounts', {
+	                        method: 'POST',
+	                        headers: { 'Content-Type': 'application/json' },
+	                        body: JSON.stringify({ address: this.email, password: 'temp123' })
+	                    });
+	                    if (accountResponse.status === 201) {
+	                        const authResponse = await fetch('https://api.mail.tm/token', {
+	                            method: 'POST',
+	                            headers: { 'Content-Type': 'application/json' },
+	                            body: JSON.stringify({ address: this.email, password: 'temp123' })
+	                        });
+	                        const authData = await authResponse.json();
+	                        this.token = authData.token;
+	                        this.service = 'MailJS';
+	                        this.startChecking();
+	                        return this.email;
+	                    }
+	                } catch (error) {
+	                    console.error('Error generating email:', error);
+	                    showToast('Failed to generate email. Please try again.', 'error');
+	                    return null;
+	                }
+	            }
+	            async checkInbox() {
+	                if (!this.token) return [];
+	                try {
+	                    const response = await fetch('https://api.mail.tm/messages', {
+	                        headers: { 'Authorization': `Bearer ${this.token}` }
+	                    });
+	                    if (response.ok) {
+	                        const data = await response.json();
+	                        this.lastChecked = new Date();
+	                        const messages = data['hydra:member'] || [];
+	                        this.saveMessagesToLocalStorage(messages);
+	                        return messages;
+	                    } else {
+	                        showToast('Failed to check inbox. Please try again later.', 'error');
+	                        return this.getMessagesFromLocalStorage();
+	                    }
+	                } catch (error) {
+	                    console.error('Inbox error:', error);
+	                    showToast('An error occurred while checking the inbox.', 'error');
+	                    return this.getMessagesFromLocalStorage();
+	                }
+	            }
+	            async getMessageDetails(id) {
+	                try {
+	                    const response = await fetch(`https://api.mail.tm/messages/${id}`, {
+	                        headers: { 'Authorization': `Bearer ${this.token}` }
+	                    });
+	                    if (response.ok) {
+	                        return await response.json();
+	                    }
+	                    return null;
+	                } catch (error) {
+	                    console.error('Error fetching message:', error);
+	                    return null;
+	                }
+	            }
+	            startChecking() {
+	                if (this.checkInterval) clearInterval(this.checkInterval);
+	                this.checkInterval = setInterval(async () => {
+	                    const messages = await this.checkInbox();
+	                    updateInbox(messages);
+	                }, 5000);
+	            }
+	            stopChecking() {
+	                if (this.checkInterval) clearInterval(this.checkInterval);
+	            }
+	            randomString(length) {
+	                const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+	                let result = '';
+	                for (let i = 0; i < length; i++) {
+	                    result += chars.charAt(Math.floor(Math.random() * chars.length));
+	                }
+	                return result;
+	            }
+	            saveMessagesToLocalStorage(messages) {
+	                if (this.email) {
+	                    localStorage.setItem(`messages_${this.email}`, JSON.stringify(messages));
+	                }
+	            }
+	            getMessagesFromLocalStorage() {
+	                if (this.email) {
+	                    const savedMessages = localStorage.getItem(`messages_${this.email}`);
+	                    return savedMessages ? JSON.parse(savedMessages) : [];
+	                }
+	                return [];
+	            }
+	            clearMessagesFromLocalStorage() {
+	                if (this.email) {
+	                    localStorage.removeItem(`messages_${this.email}`);
+	                }
+	            }
+	        }
+	        const tempMail = new TempMailReceiver();
+	        const emailText = document.getElementById('emailText');
+	        const loadingIcon = document.getElementById('loadingIcon');
+	        const copyBtnTop = document.getElementById('copyBtnTop');
+	        const qrBtn = document.getElementById('qrBtn');
+	        const copyBtn = document.getElementById('copyBtn');
+	        const refreshBtn = document.getElementById('refreshBtn');
+	        const refreshInboxBtn = document.getElementById('refreshInboxBtn');
+	        const changeBtn = document.getElementById('changeBtn');
+	        const deleteBtn = document.getElementById('deleteBtn');
+	        const messagesBody = document.getElementById('messagesBody');
+	        const qrModal = document.getElementById('qrModal');
+	        const qrCodeContainer = document.getElementById('qrCodeContainer');
+	        const qrEmailText = document.getElementById('qrEmailText');
+	        const closeQrModal = document.getElementById('closeQrModal');
+	        const emailModal = document.getElementById('emailModal');
+	        const emailFrom = document.getElementById('emailFrom');
+	        const emailSubject = document.getElementById('emailSubject');
+	        const emailDate = document.getElementById('emailDate');
+	        const emailBody = document.getElementById('emailBody');
+	        const downloadEmailBtn = document.getElementById('downloadEmailBtn');
+	        const closeEmailModal = document.getElementById('closeEmailModal');
+	        const toast = document.getElementById('toast');
+	        function saveEmailToLocalStorage(email) {
+	            localStorage.setItem('tempEmail', email);
+	        }
+	        async function loadOrGenerateEmail() {
+	            const savedEmail = localStorage.getItem('tempEmail');
+	            if (savedEmail) {
+	                tempMail.email = savedEmail;
+	                const [username, domain] = savedEmail.split('@');
+	                tempMail.username = username;
+	                tempMail.domain = domain;
+	                const authResponse = await fetch('https://api.mail.tm/token', {
+	                    method: 'POST',
+	                    headers: { 'Content-Type': 'application/json' },
+	                    body: JSON.stringify({ address: savedEmail, password: 'temp123' })
+	                });
+	                if (authResponse.ok) {
+	                    const authData = await authResponse.json();
+	                    tempMail.token = authData.token;
+	                    tempMail.startChecking();
+	                    const savedMessages = tempMail.getMessagesFromLocalStorage();
+	                    updateInbox(savedMessages);
+	                    return savedEmail;
+	                } else {
+	                    localStorage.removeItem('tempEmail');
+	                    tempMail.clearMessagesFromLocalStorage();
+	                    return await tempMail.generateEmail();
+	                }
+	            } else {
+	                const newEmail = await tempMail.generateEmail();
+	                if (newEmail) {
+	                    saveEmailToLocalStorage(newEmail);
+	                }
+	                return newEmail;
+	            }
+	        }
+	        document.addEventListener('DOMContentLoaded', async () => {
+	            const email = await loadOrGenerateEmail();
+	            if (email) {
+	                loadingIcon.style.display = 'none';
+	                emailText.textContent = email;
+	                emailText.style.display = 'inline';
+	            } else {
+	                loadingIcon.style.display = 'none';
+	                emailText.textContent = 'Failed to generate email';
+	                emailText.style.display = 'inline';
+	            }
+	        });
+	        function copyEmail(button) {
+	            if (tempMail.email) {
+	                navigator.clipboard.writeText(tempMail.email).then(() => {
+	                    button.classList.add('copied');
+	                    showToast('Email copied to clipboard!', 'success');
+	                    setTimeout(() => {
+	                        button.classList.remove('copied');
+	                    }, 3000);
+	                }).catch(() => {
+	                    showToast('Failed to copy email', 'error');
+	                });
+	            } else {
+	                showToast('No email to copy', 'error');
+	            }
+	        }
+	        copyBtnTop.addEventListener('click', () => copyEmail(copyBtnTop));
+	        copyBtn.addEventListener('click', () => copyEmail(copyBtn));
+	        qrBtn.addEventListener('click', () => {
+	            if (!tempMail.email) {
+	                showToast('No email to generate QR code', 'error');
+	                return;
+	            }
+	            qrCodeContainer.innerHTML = '';
+	            new QRCode(qrCodeContainer, {
+	                text: tempMail.email,
+	                width: 200,
+	                height: 200,
+	                colorDark: "#1C2526",
+	                colorLight: "#F5F7FA",
+	                correctLevel: QRCode.CorrectLevel.H
+	            });
+	            qrEmailText.textContent = tempMail.email;
+	            qrModal.style.display = 'flex';
+	            document.body.style.overflow = 'hidden';
+	        });
+	        closeQrModal.addEventListener('click', () => {
+	            qrModal.style.display = 'none';
+	            document.body.style.overflow = 'auto';
+	        });
+	        qrModal.addEventListener('click', (e) => {
+	            if (e.target === qrModal) {
+	                qrModal.style.display = 'none';
+	                document.body.style.overflow = 'auto';
+	            }
+	        });
+	        messagesBody.addEventListener('click', async (e) => {
+	            const tr = e.target.closest('tr');
+	            if (tr && tr.hasAttribute('data-message-id')) {
+	                tr.classList.add('read');
+	                const messageId = tr.getAttribute('data-message-id');
+	                const message = await tempMail.getMessageDetails(messageId);
+	                if (message) {
+	                    showEmailModal(message);
+	                } else {
+	                    showToast('Failed to load email details', 'error');
+	                }
+	            }
+	        });
+	        function showEmailModal(message) {
+	            // Set content first
+	            emailFrom.textContent = message.from.address || 'Unknown';
+	            emailSubject.textContent = message.subject || 'No Subject';
+	            const date = new Date(message.createdAt || new Date());
+	            emailDate.textContent = date.toLocaleString();
+	            emailBody.textContent = message.text || 'No content available';
+	            // Show modal after a short delay to ensure proper rendering
+	            requestAnimationFrame(() => {
+	                emailModal.style.display = 'flex';
+	                document.body.style.overflow = 'hidden';
+	            });
+	        }
+	        downloadEmailBtn.addEventListener('click', () => {
+	            const emailContent = `From: ${emailFrom.textContent}\nSubject: ${emailSubject.textContent}\nDate: ${emailDate.textContent}\n\n${emailBody.textContent}`;
+	            const blob = new Blob([emailContent], { type: 'text/plain' });
+	            const url = URL.createObjectURL(blob);
+	            const a = document.createElement('a');
+	            a.href = url;
+	            a.download = `${emailSubject.textContent || 'email'}.txt`;
+	            a.click();
+	            URL.revokeObjectURL(url);
+	            showToast('Email downloaded successfully!', 'success');
+	        });
+	        closeEmailModal.addEventListener('click', () => {
+	            emailModal.style.display = 'none';
+	            document.body.style.overflow = 'auto';
+	        });
+	        emailModal.addEventListener('click', (e) => {
+	            if (e.target === emailModal) {
+	                emailModal.style.display = 'none';
+	                document.body.style.overflow = 'auto';
+	            }
+	        });
+	        function showToast(message, type) {
+	            const toastIcon = toast.querySelector('i');
+	            toast.className = 'toast';
+	            toast.classList.add(type);
+	            if (type === 'success') {
+	                toastIcon.className = 'fas fa-check-circle';
+	            } else {
+	                toastIcon.className = 'fas fa-exclamation-circle';
+	            }
+	            toast.querySelector('.toast-message').textContent = message;
+	            toast.classList.add('show');
+	            setTimeout(() => {
+	                toast.classList.remove('show');
+	            }, 3000);
+	        }
+	        refreshBtn.addEventListener('click', async () => {
+	            refreshBtn.classList.add('spinning');
+	            refreshInboxBtn.classList.add('spinning');
+	            try {
+	                const messages = await tempMail.checkInbox();
+	                updateInbox(messages);
+	                showToast('Inbox refreshed', 'success');
+	            } catch (error) {
+	                showToast('Failed to refresh inbox', 'error');
+	            } finally {
+	                setTimeout(() => {
+	                    refreshBtn.classList.remove('spinning');
+	                    refreshInboxBtn.classList.remove('spinning');
+	                }, 1000);
+	            }
+	        });
+	        refreshInboxBtn.addEventListener('click', async () => {
+	            refreshBtn.classList.add('spinning');
+	            refreshInboxBtn.classList.add('spinning');
+	            const messages = await tempMail.checkInbox();
+	            updateInbox(messages);
+	            setTimeout(() => {
+	                refreshBtn.classList.remove('spinning');
+	                refreshInboxBtn.classList.remove('spinning');
+	            }, 1000);
+	        });
+	        changeBtn.addEventListener('click', async () => {
+	            if (!confirm('Are you sure you want to change your temporary email? All current messages will be lost.')) return;
+	            tempMail.stopChecking();
+	            tempMail.clearMessagesFromLocalStorage();
+	            loadingIcon.style.display = 'inline';
+	            emailText.style.display = 'none';
+	            const email = await tempMail.generateEmail();
+	            if (email) {
+	                saveEmailToLocalStorage(email);
+	                loadingIcon.style.display = 'none';
+	                emailText.textContent = email;
+	                emailText.style.display = 'inline';
+	                updateInbox([]);
+	                showToast('New temporary email generated!', 'success');
+	            } else {
+	                loadingIcon.style.display = 'none';
+	                emailText.textContent = 'Failed to generate email';
+	                emailText.style.display = 'inline';
+	                showToast('Failed to generate new email', 'error');
+	            }
+	        });
+	        deleteBtn.addEventListener('click', () => {
+	            if (!confirm('Are you sure you want to delete your temporary email? All messages will be lost.')) return;
+	            tempMail.stopChecking();
+	            tempMail.clearMessagesFromLocalStorage();
+	            localStorage.removeItem('tempEmail');
+	            emailText.textContent = 'Email deleted - generate a new one';
+	            messagesBody.innerHTML = `
+	                <tr>
+	                    <td colspan="3" class="empty-state">
+	                        <i class="fas fa-inbox"></i>
+	                        <h3>Your inbox is empty</h3>
+	                        <p>Generate a new temporary email address to receive messages</p>
+	                    </td>
+	                </tr>
+	            `;
+	            showToast('Temporary email deleted', 'success');
+	        });
+	        function updateInbox(messages) {
+	            messagesBody.innerHTML = '';
+	            if (messages.length === 0) {
+	                messagesBody.innerHTML = `
+	                    <tr>
+	                        <td colspan="3" class="empty-state">
+	                            <i class="fas fa-inbox"></i>
+	                            <h3>Your inbox is empty</h3>
+	                            <p>Use your temporary email address to sign up for services and receive messages here</p>
+	                        </td>
+	                    </tr>
+	                `;
+	                return;
+	            }
+	            messages.forEach(msg => {
+	                const from = msg.from && msg.from.address ? msg.from.address : 'Unknown';
+	                const subject = msg.subject || 'No Subject';
+	                const date = new Date(msg.createdAt || new Date());
+	                const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+	                const tr = document.createElement('tr');
+	                tr.setAttribute('data-message-id', msg.id);
+	                if (msg.seen) tr.classList.add('read');
+	                tr.innerHTML = `
+	                    <td>
+	                        <div class="message-sender">${from}</div>
+	                    </td>
+	                    <td>
+	                        <div class="message-subject">${subject}</div>
+	                    </td>
+	                    <td>
+	                        <div class="message-time">${timeString}</div>
+	                    </td>
+	                `;
+	                messagesBody.appendChild(tr);
+	            });
+	        }
+	    </script>
+	</body>
+	</html>
