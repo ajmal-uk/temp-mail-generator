@@ -92,65 +92,11 @@ def app_page():
                           meta_title="ZyMail App | Free Temporary Email Generator",
                           meta_description="Generate free temporary email addresses instantly with ZyMail. Protect your privacy, avoid spam, receive OTPs - no signup required. Best disposable email service.")
 
-# Enhanced sitemap with priority and frequency
 @app.route('/sitemap.xml')
-def sitemap():
-    pages = []
-    # Static pages with priority and frequency
-    static_pages = [
-        ("", "1.0", "daily"),
-        ("/about", "0.8", "weekly"),
-        ("/contact", "0.7", "monthly"),
-        ("/terms", "0.6", "monthly"),
-        ("/privacy", "0.7", "monthly"),
-        ("/faq", "0.9", "weekly"),
-        ("/blog", "0.8", "weekly"),
-        ("/features", "0.9", "weekly"),
-        ("/app", "0.9", "daily"),
-    ]
-    
-    for path, priority, freq in static_pages:
-        pages.append((f"{app.config['SITE_URL']}{path}", priority, freq))
-    
-    # Blog posts
-    blog_posts = [
-        ("/blog/why-use-a-temporary-email-service", "0.8", "weekly"),
-        ("/blog/how-to-avoid-spam-with-temporary-emails", "0.8", "weekly"),
-        ("/blog/protecting-your-online-privacy", "0.8", "weekly")
-    ]
-    pages.extend([(f"{app.config['SITE_URL']}{post}", priority, freq) for post, priority, freq in blog_posts])
-    
-    sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    sitemap_xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    
-    for url, priority, freq in pages:
-        sitemap_xml += f"""
-        <url>
-            <loc>{url}</loc>
-            <lastmod>{datetime.now().strftime('%Y-%m-%d')}</lastmod>
-            <changefreq>{freq}</changefreq>
-            <priority>{priority}</priority>
-        </url>
-        """
-    
-    sitemap_xml += '</urlset>'
-    return Response(sitemap_xml, mimetype='application/xml')
+def static_sitemap():
+    return send_from_directory('static', 'sitemap.xml')
 
-# Enhanced robots.txt
-@app.route('/robots.txt')
-def robots():
-    robots_content = """User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-Sitemap: https://zymail.pythonanywhere.com/sitemap.xml
-
-# Crawl delay
-Crawl-delay: 1"""
-    return Response(robots_content, mimetype='text/plain')
-
-# Error handlers with SEO-friendly pages
 @app.errorhandler(400)
 def bad_request(error):
     return render_template('errors/400.html', 
