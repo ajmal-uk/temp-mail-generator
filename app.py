@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, make_response, redirect, render_template, request, send_from_directory
 from flask_compress import Compress
 import os
 from datetime import datetime
@@ -11,6 +11,7 @@ Compress(app)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key-here')
 app.config['SITE_URL'] = 'https://zymail.pythonanywhere.com'
 
+
 # Helper functions
 def get_current_year():
     return datetime.now().year
@@ -18,7 +19,17 @@ def get_current_year():
 def markdown_to_html(md_text):
     return markdown.markdown(md_text)
 
-# Enhanced SEO headers
+
+@app.before_request
+def redirect_nonwww():
+    if request.host.startswith('www.'):
+        return redirect(request.url.replace('www.', '', 1), code=301)
+    
+    if not request.is_secure:
+        return redirect(request.url.replace('http://', 'https://', 1), code=301)
+    
+
+
 @app.after_request
 def add_security_headers(response):
     response.headers['X-Content-Type-Options'] = 'nosniff'
@@ -26,6 +37,7 @@ def add_security_headers(response):
     response.headers['X-XSS-Protection'] = '1; mode=block'
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     response.headers['Permissions-Policy'] = 'geolocation=(), microphone=(), camera=()'
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains; preload'
     return response
 
 # Routes with enhanced SEO
@@ -110,9 +122,57 @@ def app_page():
                           meta_keywords="temp mail, temporary email, disposable email, free temp mail, email privacy, anonymous email, spam prevention, OTP receiver, email verification, secure email, 10 minute mail, instant email, no signup email, ZyMail",
                           canonical_url="https://zymail.pythonanywhere.com/app")
 
+
+
+@app.route('/blog/why-use-a-temporary-email-service')
+def blog_post_1():
+    return render_template('why-use-a-temporary-email-service.html', 
+                          year=get_current_year(),
+                          meta_title="Why Use a Temporary Email Service? | ZyMail Blog",
+                          meta_description="Learn how temporary email services protect your inbox from spam and enhance privacy during online registrations.",
+                          canonical_url="https://zymail.pythonanywhere.com/blog/why-use-a-temporary-email-service")
+ 
+@app.route('/blog/protecting-your-online-privacy')
+def blog_post_2():
+    return render_template('protecting-your-online-privacy.html', 
+                          year=get_current_year(),
+                          meta_title="Protecting Your Online Privacy in 2025 | ZyMail Blog",
+                          meta_description="Essential tips and tools for safeguarding your personal information online with temporary email services.",
+                          canonical_url="https://zymail.pythonanywhere.com/blog/protecting-your-online-privacy")
+ 
+@app.route('/blog/how-to-avoid-spam-with-temporary-emails')
+def blog_post_3():
+    return render_template('how-to-avoid-spam-with-temporary-emails.html', 
+                          year=get_current_year(),
+                          meta_title="How to Avoid Spam with Temporary Emails | ZyMail Blog",
+                          meta_description="Discover effective strategies to prevent spam using disposable email addresses and keep your primary inbox clean.",
+                          canonical_url="https://zymail.pythonanywhere.com/blog/how-to-avoid-spam-with-temporary-emails")
+
+
+
+
 @app.route('/sitemap.xml')
-def static_sitemap():
-    return send_from_directory('static', 'sitemap.xml')
+def sitemap():
+    pages = [
+        {'loc': 'https://zymail.pythonanywhere.com/', 'priority': '1.0'},
+        {'loc': 'https://zymail.pythonanywhere.com/about', 'priority': '0.8'},
+        {'loc': 'https://zymail.pythonanywhere.com/app', 'priority': '0.9'},
+        {'loc': 'https://zymail.pythonanywhere.com/blog', 'priority': '0.7'},
+        {'loc': 'https://zymail.pythonanywhere.com/blog/why-use-a-temporary-email-service', 'priority': '0.6'},
+        {'loc': 'https://zymail.pythonanywhere.com/blog/protecting-your-online-privacy', 'priority': '0.6'},
+        {'loc': 'https://zymail.pythonanywhere.com/blog/how-to-avoid-spam-with-temporary-emails', 'priority': '0.6'},
+        {'loc': 'https://zymail.pythonanywhere.com/contact', 'priority': '0.7'},
+        {'loc': 'https://zymail.pythonanywhere.com/faq', 'priority': '0.8'},
+        {'loc': 'https://zymail.pythonanywhere.com/features', 'priority': '0.8'},
+        {'loc': 'https://zymail.pythonanywhere.com/privacy', 'priority': '0.7'},
+        {'loc': 'https://zymail.pythonanywhere.com/terms', 'priority': '0.7'}
+    ]
+    
+    sitemap_xml = render_template('sitemap.xml', pages=pages)
+    response = make_response(sitemap_xml)
+    response.headers['Content-Type'] = 'application/xml'
+    return response
+
 
 # Error handlers with SEO
 @app.errorhandler(400)
@@ -155,6 +215,10 @@ def google_verification():
 @app.route('/robots.txt')
 def robots():
     return send_from_directory('assets', 'robots.txt')
+
+@app.route('/llms.txt')
+def llms():
+    return send_from_directory('assets', 'llms.txt')
 
 @app.route('/ads.txt')
 def ads():
